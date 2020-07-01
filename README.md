@@ -11,6 +11,15 @@ Web app proyect for market food
 
 This application want to help to business to offer products and news in page hosted in Internet
 
+Este protecyo tendra como alcance la creacion de un e-commerce
+Donde al ingresar al sitio podras:
+
+- Buscar los items mediante un buscador
+- Filtrar los items mediante el uso de categorias que te mostrara la informacion contenida en cada una de estas
+- Agregar los items que desees a tu carrito de compras, donde podras agregar, restar o eliminar unidades del item a comprar
+- Una vez hecho esto procederas a el proceso de compra donde en este caso se implementara ...
+- En caso de no tener estar con la sesion iniciada se solicitara iniciar sesion o registrarse, luego de esto se redigira a la pagina para continuar la compra
+
 ## Autores
 
 - Axel Arteaga ruiz
@@ -69,6 +78,14 @@ npm run start
 npm test
 ```
 
+## Definiciones para el desarrollor
+
+### Frontend
+
+- Componentes created has NameOfComponent.jsx en ./src/components/Component.jsx
+- Style for each component created in SASS has NameOfComponent.scss in ./src/assets/styles/Style.scss
+- Test will be created has NameOfComponent.test.js in ./src/__test__/Test.test.js
+
 ## Technologies
 
 ### Frontend
@@ -92,14 +109,5 @@ Image Preview
 # License
 
 This Food Market is released under the [MIT License](https://opensource.org/licenses/MIT).
-
-## Definiciones para el desarrollor
-
-### Frontend
-
-- Componentes created has .jsx en ./src/components/Component.jsx
-- Style for each component created in SASS has .scss in ./src/assets/styles/Style.scss
-- Test will be created has Test.test.js in ./src/__test__/Test.test.js
-
 
 ### I born at 16/06/2020
