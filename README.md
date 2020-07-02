@@ -82,7 +82,7 @@ npm test
 ### Frontend
 
 - Componentes created has NameOfComponent.jsx en ./src/components/Component.jsx
-- Style for each component created in SASS has NameOfComponent.scss in ./src/assets/styles/Style.scss
+- Style for each component created in SASS has NameOfComponent.scss in ./src/assets/styles/components/Style.scss
 - Test will be created has NameOfComponent.test.js in ./src/__test__/Test.test.js
 
 ## Technologies

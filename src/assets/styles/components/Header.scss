@@ -2,6 +2,7 @@
   background-color: #E7305B;
 
   &__brand {
+    color: white;
     display: flex;
     justify-content: space-around;
     padding: 1em 0;
@@ -34,8 +35,13 @@
     span {
       color: white;
       margin: 0 1.5em;
+      text-transform: capitalize;
     }
 
+    .icon::before {
+      content: "\07F7";
+      margin-right: 0.3em;
+    }
 
   }
 }

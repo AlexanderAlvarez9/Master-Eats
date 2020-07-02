@@ -1,37 +1,37 @@
 import React from 'react';
-import '../assets/styles/Header.scss'
-import Categories from './Categories';
+import '../assets/styles/components/Header.scss'
+import CategoriesMenu from './CategoriesMenu';
 
 
-class Header extends React.Component {
-  render() {
-    const numbers = [1, 2, 3, 4, 5];
-    return (
-      <React.Fragment>
-        <div className="Header">
-          <section className="Header__brand">
-            <div className="Header__brand--logo">
-              <img src="" alt="Logo" />
-              <span className="Header__title">Slogan</span>
-            </div>
-            <input className="Header__brand--search" type="text" name="search" id="search" placeholder="Encuentra tu Producto" />
-            <div className="Header__brand--icons">
-              <span className="icon">Icono</span>
-              <span className="icon">Icono</span>
-              <span className="icon">Icono</span>
-            </div>
-          </section>
 
+const Header = () => {
+  const categories = ['carne', 'lacteos', 'enlatados', 'vegetales', 'snacks'];
 
-          <section className="Header__categories">
+  return (
+    <React.Fragment>
+      <div className="Header">
+        <section className="Header__brand">
+          <div className="Header__brand--logo">
+            <img src="" alt="Logo" />
+            <span className="Header__title">Slogan</span>
+          </div>
+          <input className="Header__brand--search" type="text" name="search" id="search" placeholder="Encuentra tu Producto" />
+          <div className="Header__brand--icons">
+            <span className="icon">Usuario</span>
+            <span className="icon">Carrito</span>
+            <span className="icon">Salir</span>
+          </div>
+        </section>
 
-            <Categories categorie={numbers} />
+        <section className="Header__categories">
 
-          </section>
-        </div>
-      </React.Fragment>
-    )
-  }
+          {categories.map(item =>
+            <CategoriesMenu key={item} categorie={item} />
+          )}
+
+        </section>
+      </div>
+    </React.Fragment>
+  )
 }
-
 export default Header;

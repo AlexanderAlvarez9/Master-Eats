@@ -1,10 +1,20 @@
 import React from 'react';
-import '../assets/styles/Footer.scss'
+import '../assets/styles/components/Footer.scss'
 
 class Footer extends React.Component {
   render() {
     return (
-      <div className="Footer">Soy el Footer</div>
+      <React.Fragment>
+        <div className="Footer">
+          <div className="Footer--social-networks">
+            <i className="icon">Fb</i>
+            <i className="icon">Ig</i>
+            <i className="icon">Tw</i>
+            <i className="icon">Wa</i>
+            <i className="icon">Yt</i>
+          </div>
+        </div>
+      </React.Fragment>
     )
   }
 }
