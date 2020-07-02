@@ -1,0 +1,41 @@
+.Header {
+  background-color: #E7305B;
+
+  &__brand {
+    display: flex;
+    justify-content: space-around;
+    padding: 1em 0;
+
+    &--search {
+      background-color: #F9F9F9;
+      color: green;
+      opacity: 0.5;
+      font-size: 1em;
+      outline: none;
+      border: none;
+      border-radius: 1em;
+      top: 12px;
+      left: 588px;
+      width: 40%;
+      height: 2.5em;
+    }
+
+    .icon {
+      margin: 0 1em;
+    }
+  }
+
+  &__categories {
+    padding: 1em 0;
+    display: flex;
+    justify-content: center;
+
+
+    span {
+      color: white;
+      margin: 0 1.5em;
+    }
+
+
+  }
+}
