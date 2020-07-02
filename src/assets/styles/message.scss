@@ -1,11 +1,20 @@
-.success {
+.message {
   display: flex;
+  flex-direction: column;
   height: 90vh;
   width: 80vw;
   margin: 0 auto;
   align-items: center;
   justify-content: center;
   background-color: pink;
-  color: black
-}
+  color: black;
 
+  &__image {
+    width: 850px;
+  }
+
+  &__title {
+    font-size: xx-large;
+  }
+  
+}

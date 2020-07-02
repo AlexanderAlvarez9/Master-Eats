@@ -1,12 +1,12 @@
 import React from 'react';
-import '../assets/styles/NotFound.scss'
+import '../assets/styles/message.scss'
 import empty from '../assets/img/undraw_empty_street_sfxm.png'
 
 const notfound = () => {
     return (
-    <div className="notfound">
-        <img src={empty} alt=""/>
-        <h1>Error</h1>
+    <div className="message">
+        <img className="message__image" src={empty} alt=""/>
+        <h1 className="message__title" >Error 404</h1>
     </div>
     )
 }
