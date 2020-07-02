@@ -4,4 +4,4 @@ import HelloWorld from './components/HelloWorld';
 import NotFound from './components/NotFound';
 import Success from './components/Success'
 
-ReactDOM.render(<Success />, document.getElementById('app'));
+ReactDOM.render(<NotFound />, document.getElementById('app'));

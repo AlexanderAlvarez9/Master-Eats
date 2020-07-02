@@ -1,5 +1,6 @@
 .notfound {
   display: flex;
+  flex-direction: column;
   height: 90vh;
   width: 80vw;
   margin: 0 auto;
@@ -7,4 +8,9 @@
   justify-content: center;
   background-color: pink;
   color: black
+
+  img {
+    width: 100px;
+  }
+  
 }
