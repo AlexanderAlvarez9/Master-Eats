@@ -6,7 +6,8 @@
   "scripts": {
     "test": "jest",
     "build": "webpack --mode development",
-    "start": "webpack-dev-server --open --mode development"
+    "start": "webpack-dev-server --open --mode development",
+    "sass": "sass --watch src/assets/styles/shopping-cart.scss public/shopping-cart.css "
   },
   "repository": {
     "type": "git",
