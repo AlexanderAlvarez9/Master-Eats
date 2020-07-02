@@ -1,0 +1,50 @@
+@mixin btn {
+  background-color: #9bdeac;
+  padding: 8px;
+  border-radius: 10px;
+  color: #ffffff;
+  border: none;
+}
+
+@mixin border {
+  border: 1px solid #f1f1f1;
+  box-shadow: 1px 1px 1px 1px #00000029;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 1em;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0.5em;
+  text-align: center;
+  @include border();
+  max-width: 12em;
+
+  &--img {
+    margin: 0 auto;
+  }
+
+  &--text {
+    margin: 1em;
+
+    &__title {
+      font-weight: bold;
+      margin: 0;
+    }
+
+    &__price {
+      font-weight: bold;
+    }
+
+  }
+
+  &--button {
+    @include border();
+    @include btn();
+    margin: 0 auto;
+    width: 10em;
+    outline: none;
+  }
+}

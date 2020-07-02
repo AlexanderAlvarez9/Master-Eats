@@ -3,7 +3,7 @@ import '../assets/styles/components/Carousel.scss'
 
 const Carousel = ({ children }) => (
   <section className="carousel">
-    <div className="carousel__container">
+    <div className="products__cards--container">
       {children}
     </div>
   </section>
