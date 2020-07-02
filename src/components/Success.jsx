@@ -7,7 +7,7 @@ const Success = () => {
     return (
         <div className="message">
             <img className="message__image" src={success} alt=""/>
-            <h1 className="message__title" >Success!!</h1>
+            <h1 className="message__title" >Tu comida esta en camino!</h1>
         </div>
         )
 }
