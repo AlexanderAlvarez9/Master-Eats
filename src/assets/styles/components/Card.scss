@@ -1,0 +1,39 @@
+@import '../components/App.scss';
+
+.card {
+  background-color: var(--card);
+  border-radius: 1em;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0.5em;
+  text-align: center;
+  @include border();
+  max-width: 12em;
+
+  &--img {
+    margin: 0 auto;
+  }
+
+  &--text {
+    margin: 1em;
+
+    &__title {
+      font-weight: bold;
+      margin: 0;
+    }
+
+    &__price {
+      font-weight: bold;
+    }
+
+  }
+
+  &--button {
+    @include border();
+    @include btn();
+    margin: 0 auto;
+    width: 10em;
+    outline: none;
+  }
+}
