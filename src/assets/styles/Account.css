@@ -16,7 +16,6 @@ body {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  margin-bottom: 50px;
   margin-top: 12em;
 }
 .container__menu {
