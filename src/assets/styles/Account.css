@@ -13,42 +13,55 @@ body {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin-top: 12em;
 }
+
 .container__menu {
   width: 500px;
   height: 407px;
   background: #FFFFFF;
-  box-shadow: 0px 3px 6px #00000029;
+  -webkit-box-shadow: 0px 3px 6px #00000029;
+          box-shadow: 0px 3px 6px #00000029;
   border-radius: 10px;
 }
+
 .container__menu ul {
   list-style: none;
   text-decoration: none;
 }
+
 .container__menu ul li {
   padding-bottom: 24px;
   padding-left: 20px;
 }
+
 .container__menu ul li a {
   text-decoration: none;
   color: #4C5454;
 }
+
 .container__menu ul li a:hover {
   color: #E7305B;
 }
+
 .container__menu-settings {
   width: 1100px;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   background: #FFFFFF;
-  box-shadow: 0px 3px 6px #00000029;
+  -webkit-box-shadow: 0px 3px 6px #00000029;
+          box-shadow: 0px 3px 6px #00000029;
   border-radius: 10px;
 }
+
 .container h2 {
   font-size: 24px;
   width: 107px;
@@ -60,9 +73,13 @@ body {
 
 .form-wrapper {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   margin-top: 30px;
 }
 
@@ -70,6 +87,7 @@ body {
   font-family: "Lato", sans-serif;
   font-size: 20px;
 }
+
 .form-row input {
   width: 495px;
   height: 48px;
@@ -80,10 +98,15 @@ body {
 }
 
 .form-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   padding-right: 28px;
 }
+
 .form-button button {
   width: 172px;
   height: 51px;
@@ -95,8 +118,19 @@ body {
   margin-bottom: 25px;
 }
 
+.back-img {
+  margin-top: 65px;
+  margin-left: 100px;
+}
+
+.back-img img {
+  width: 400px;
+  height: 325px;
+}
+
 footer {
   width: 100%;
   height: 80px;
   background: #E7305B;
 }
+/*# sourceMappingURL=Account.css.map */
