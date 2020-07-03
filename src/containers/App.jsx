@@ -1,11 +1,14 @@
 import React from 'react';
+import '../assets/styles/components/App.scss'
 
+import Containers from './Containers';
 import Layout from '../components/Layout'
 import HelloWorld from '../components/HelloWorld';
 import Categories from '../components/Categories';
 import Carousel from '../components/Carousel';
 import Card from '../components/Card';
-import Containers from './Containers';
+import Success from '../components/Success';
+import NotFound from '../components/NotFound';
 
 function App() {
   const initialState = [
@@ -13,30 +16,37 @@ function App() {
       'id': 1,
       'image': '../assets/imgs/cerveza.png',
       'title': 'Carne de res',
-      'price': 10234,
+      'price': 12000,
       'categorie': 'Carnes'
     },
     {
       'id': 2,
       'image': '../assets/imgs/img.png',
       'title': 'Zanahoria',
-      'price': 10678,
+      'price': 1000,
       'categorie': 'Verdura'
-    },
-    {
-      'id': 4,
-      'image': '../assets/imgs/img.png',
-      'title': 'Zapato',
-      'price': 3452,
-      'categorie': 'Chancla'
     },
     {
       'id': 3,
       'image': '../assets/imgs/img.png',
-      'title': 'Leche de cabra',
-      'price': 5678,
+      'title': 'Yogourt',
+      'price': 3000,
       'categorie': 'lacteos'
-    }
+    },
+    {
+      'id': 4,
+      'image': '../assets/imgs/img.png',
+      'title': 'Atun',
+      'price': 3500,
+      'categorie': 'Enlatado'
+    },
+    {
+      'id': 5,
+      'image': '../assets/imgs/img.png',
+      'title': 'Papas',
+      'price': 1500,
+      'categorie': 'Snacks'
+    },
   ];
 
   return (
@@ -44,10 +54,8 @@ function App() {
       <Layout>
 
         <Containers>
-
           {initialState.length > 0 &&
-
-            <Categories title="Mi Lista">
+            <Categories title="Categoria Dinamica">
               <Carousel>
                 {initialState.map(item =>
                   <Card key={item.id} {...item} />

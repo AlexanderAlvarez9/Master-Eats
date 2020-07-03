@@ -1,5 +1,5 @@
 .Footer {
-  background-color: #E7305B;
+  background-color: var(--principal);
   display: flex;
   justify-content: flex-end;
   padding: 0.7em 0;
@@ -12,7 +12,7 @@
   }
 
   i {
-    color: white;
+    color: var(--font-contrast);
     font-size: 1.5em;
     margin: 0.5em;
   }

@@ -1,17 +1,16 @@
 .Header {
-  background-color: #E7305B;
+  background-color: var(--principal);
 
   &__brand {
-    color: white;
+    color: var(--font-contrast);
     display: flex;
     justify-content: space-around;
     padding: 1em 0;
 
     &--search {
-      background-color: #F9F9F9;
-      color: green;
-      opacity: 0.5;
+      background-color: var(--principal-contrast);
       font-size: 1em;
+      color: var(--font-contrast);
       outline: none;
       border: none;
       border-radius: 1em;
@@ -33,7 +32,7 @@
 
 
     span {
-      color: white;
+      color: var(--font-contrast);
       margin: 0 1.5em;
       text-transform: capitalize;
     }
