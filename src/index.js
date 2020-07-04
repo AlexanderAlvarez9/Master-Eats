@@ -1,5 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import HelloWorld from './components/HelloWorld';
+import Form from './pages/Form';
 
-ReactDOM.render(<HelloWorld />, document.getElementById('app'));
+ReactDOM.render(<Form />, document.getElementById('app'));
