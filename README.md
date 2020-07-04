@@ -20,16 +20,15 @@ Donde al ingresar al sitio podras:
 - Una vez hecho esto procederas a el proceso de compra donde en este caso se implementara ...
 - En caso de no tener estar con la sesion iniciada se solicitara iniciar sesion o registrarse, luego de esto se redigira a la pagina para continuar la compra
 
-## Autores
+## Creadores
 
-- Axel Arteaga ruiz
-- Camilo Andres Alfonso Suarez
-- Alexander Alvarez
-- Walter Salas
-- Juan Camilo
-- Felipe Chavez
 - Alejandro Ortiz
+- Alexander Alvarez
+- Axel Arteaga Ruiz
+- Camilo Andres Alfonso Suarez
+- Felipe Chavez
 - Juan Camilo Moreno
+- Walter Salas
 
 ---
 
@@ -68,7 +67,7 @@ For install just need…
 npm install
 ```
 
-## How Run
+## How Run in dev mode
 ```jsx
 npm run start
 ```
@@ -83,7 +82,7 @@ npm test
 ### Frontend
 
 - Componentes created has NameOfComponent.jsx en ./src/components/Component.jsx
-- Style for each component created in SASS has NameOfComponent.scss in ./src/assets/styles/Style.scss
+- Style for each component created in SASS has NameOfComponent.scss in ./src/assets/styles/components/Style.scss
 - Test will be created has NameOfComponent.test.js in ./src/__test__/Test.test.js
 
 ## Technologies

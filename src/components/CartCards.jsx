@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBeer } from '@fortawesome/free-solid-svg-icons';
 import cerveza from '../assets/img/cerveza.png';
 
-const Cards = () => (
+const CartCards = () => (
   <section className="products__cards">
     <div className="products__cards--title">
       <span>
@@ -51,4 +51,4 @@ const Cards = () => (
   </section>
 );
 
-export default Cards;
+export default CartCards;

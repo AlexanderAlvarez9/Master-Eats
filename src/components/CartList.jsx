@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlusCircle, faMinusCircle, faTimesCircle } from '@fortawesome/free-solid-svg-icons';
 import cerveza from '../assets/img/cerveza.png';
 
-const List = () => (
+const CartList = () => (
   <section className="products__list">
     <div className="products__list--title">
       <span>Unidades</span>
@@ -88,4 +88,4 @@ const List = () => (
   </section>
 );
 
-export default List;
+export default CartList;
