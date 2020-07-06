@@ -23,7 +23,7 @@
       border-radius: 1em;
       top: 12px;
       left: 588px;
-      width: 40%;
+      max-width: 40%;
       height: 2.5em;
 
       .faSearch {
@@ -35,7 +35,7 @@
         outline: none;
         height: 90%;
         border: none;
-        width: 90%;
+        width: 70%;
       }
     }
 
@@ -58,10 +58,15 @@
       color: var(--font-contrast);
       margin: 0 1.5em;
       text-transform: capitalize;
-    }
+      display: flex;
+      flex-direction: row;
+      align-items: center;
 
-    .icon::before {
-      margin-right: 0.3em;
+
+      img {
+        height: 1.5em;
+        margin-right: 0.3em;
+      }
     }
 
   }

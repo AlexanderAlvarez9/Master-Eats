@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+
+body {
+  background-color: $background-color;
+  color: $text-color;
+  a {
+    text-decoration: none;
+  }
+  font-family: 'Lato', sans-serif;
+  .fa-minus-circle,
+  .fa-times-circle {
+    color: $secondary-color;
+  }
+  .fa-plus-circle {
+    color: $primary-color;
+  }
+  .fa-minus-circle,
+  .fa-plus-circle {
+    font-size: 20px;
+  }
+  .fa-times-circle {
+    font-size: 25px;
+  }
+}
