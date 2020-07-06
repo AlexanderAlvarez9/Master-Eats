@@ -21,14 +21,13 @@ By visiting this website, the user will be able to:
 
 ## Authors
 
-- Axel Arteaga ruiz
-- Camilo Andres Alfonso Suarez
-- Alexander Alvarez
-- Walter Salas
-- Juan Camilo
-- Felipe Chavez
 - Alejandro Ortiz
+- Alexander Alvarez
+- Axel Arteaga Ruiz
+- Camilo Andres Alfonso Suarez
+- Felipe Chavez
 - Juan Camilo Moreno
+- Walter Salas
 
 ## Mock Ups
 

@@ -1,0 +1,8 @@
+.products__cards--container {
+  color: #4c5454;
+  font-family: "Lato",
+    sans-serif;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-gap: 10px;
+}
