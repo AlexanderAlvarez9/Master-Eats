@@ -1,8 +1,8 @@
 import React from 'react';
-import '../assets/styles/components/App.scss'
+import '../assets/styles/components/App.scss';
 
 import Containers from './Containers';
-import Layout from '../components/Layout'
+import Layout from '../components/Layout';
 import Categories from '../components/Categories';
 import Carousel from '../components/Carousel';
 import Card from '../components/Card';
@@ -16,57 +16,55 @@ function App() {
       'image': '../assets/imgs/cerveza.png',
       'title': 'Carne de res',
       'price': 12000,
-      'categorie': 'Carnes'
+      'categorie': 'Carnes',
     },
     {
       'id': 2,
       'image': '../assets/imgs/img.png',
       'title': 'Zanahoria',
       'price': 1000,
-      'categorie': 'Verdura'
+      'categorie': 'Verdura',
     },
     {
       'id': 3,
       'image': '../assets/imgs/img.png',
       'title': 'Yogourt',
       'price': 3000,
-      'categorie': 'lacteos'
+      'categorie': 'lacteos',
     },
     {
       'id': 4,
       'image': '../assets/imgs/img.png',
       'title': 'Atun',
       'price': 3500,
-      'categorie': 'Enlatado'
+      'categorie': 'Enlatado',
     },
     {
       'id': 5,
       'image': '../assets/imgs/img.png',
       'title': 'Papas',
       'price': 1500,
-      'categorie': 'Snacks'
+      'categorie': 'Snacks',
     },
   ];
 
   return (
     <React.Fragment>
       <Layout>
-
         <Containers>
-          {initialState.length > 0 &&
+          {initialState.length > 0 && (
             <Categories title="Categoria Dinamica">
               <Carousel>
-                {initialState.map(item =>
+                {initialState.map((item) => (
                   <Card key={item.id} {...item} />
-                )}
+                ))}
               </Carousel>
             </Categories>
-          }
+          )}
         </Containers>
-
       </Layout>
     </React.Fragment>
-  )
+  );
 }
 
 export default App;
