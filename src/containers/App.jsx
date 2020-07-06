@@ -1,9 +1,8 @@
 import React from 'react';
-import '../assets/styles/components/App.scss'
+import '../assets/styles/components/App.scss';
 
 import Containers from './Containers';
-import Layout from '../components/Layout'
-import HelloWorld from '../components/HelloWorld';
+import Layout from '../components/Layout';
 import Categories from '../components/Categories';
 import Carousel from '../components/Carousel';
 import Card from '../components/Card';
@@ -52,22 +51,20 @@ function App() {
   return (
     <React.Fragment>
       <Layout>
-
         <Containers>
-          {initialState.length > 0 &&
+          {initialState.length > 0 && (
             <Categories title="Categoria Dinamica">
               <Carousel>
-                {initialState.map(item =>
+                {initialState.map((item) => (
                   <Card key={item.id} {...item} />
-                )}
+                ))}
               </Carousel>
             </Categories>
-          }
+          )}
         </Containers>
-
       </Layout>
     </React.Fragment>
-  )
+  );
 }
 
 export default App;
