@@ -3,7 +3,6 @@ import '../assets/styles/components/App.scss'
 
 import Containers from './Containers';
 import Layout from '../components/Layout'
-import HelloWorld from '../components/HelloWorld';
 import Categories from '../components/Categories';
 import Carousel from '../components/Carousel';
 import Card from '../components/Card';
