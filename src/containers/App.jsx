@@ -2,13 +2,13 @@ import React from 'react';
 import '../assets/styles/components/App.scss'
 
 import Containers from './Containers';
-import Layout from '../components/Layout'
-import HelloWorld from '../components/HelloWorld';
+import Layout from '../components/Layout';
 import Categories from '../components/Categories';
 import Carousel from '../components/Carousel';
 import Card from '../components/Card';
 import Success from '../components/Success';
 import NotFound from '../components/NotFound';
+import { Link, BrowserRouter, Route, Switch } from 'react-router-dom';
 
 function App() {
   const initialState = [
@@ -51,21 +51,33 @@ function App() {
 
   return (
     <React.Fragment>
-      <Layout>
+      <BrowserRouter>
+        <Layout>
+          <Switch>
+            <Route exact path="/Success" component={Success} />
+            <Route exact path="/NotFound" component={NotFound} />
+          </Switch>
 
-        <Containers>
-          {initialState.length > 0 &&
-            <Categories title="Categoria Dinamica">
-              <Carousel>
-                {initialState.map(item =>
-                  <Card key={item.id} {...item} />
-                )}
-              </Carousel>
-            </Categories>
-          }
-        </Containers>
+          <Containers>
+            {initialState.length > 0 &&
+              <Categories title="Categoria Dinamica">
+                <Carousel>
+                  {initialState.map(item =>
+                    <Card key={item.id} {...item} />
+                  )}
+                </Carousel>
+              </Categories>
+            }
 
-      </Layout>
+            <ul>
+              <li><Link to="/Success">Success</Link></li>
+              <li><Link to="/NotFound">NotFound</Link></li>
+
+            </ul>
+
+          </Containers>
+        </Layout>
+      </BrowserRouter>
     </React.Fragment>
   )
 }
