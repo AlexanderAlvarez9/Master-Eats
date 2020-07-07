@@ -13,7 +13,6 @@ app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 
 // routes
-app.use(require('./routes/index'));
 app.use('/api/products',require('./routes/products'));
 
 // Starting server

@@ -1,5 +1,5 @@
 {
-  "name": "MasterEats",
+  "name": "mastereats",
   "version": "1.0.0",
   "description": "Proyecto Grupal Platzi Master - Cohort 3 - Grupo Ana - Team JS",
   "main": "index.js",
@@ -7,7 +7,7 @@
     "test": "jest",
     "build": "webpack --mode development",
     "start": "webpack-dev-server --open --mode development",
-    "dev": "webpack-dev-server --open --mode development && nodemon src/server.js"
+    "dev": "nodemon src/server.js"
   },
   "repository": {
     "type": "git",
