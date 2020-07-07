@@ -31,6 +31,18 @@ body {
   overflow-x: hidden;
 }
 
+a:visited {
+  color: var(--visited);
+}
+
+a:hover {
+  color: var(--hover);
+}
+
+a:active {
+  color: var(--active);
+}
+
 ::-webkit-scrollbar {
   width: 12px;
 }

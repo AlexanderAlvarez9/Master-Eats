@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import '../assets/styles/components/Card.scss'
 
 const Card = ({ title, price, categorie }) => {
-  const cover = '/src/assets/imgs/cerveza.png';
+  const cover = '/src/assets/img/cerveza.png';
 
   return (
     <div className="card">

@@ -1,6 +1,11 @@
 .Header {
   background-color: var(--principal);
 
+  &__title {
+    font-size: 2em;
+    margin-left: 1em;
+  }
+
   &__brand {
     color: var(--font-contrast);
     display: flex;
@@ -9,6 +14,8 @@
 
     &--search {
       background-color: var(--principal-contrast);
+      display: flex;
+      align-items: center;
       font-size: 1em;
       color: var(--font-contrast);
       outline: none;
@@ -16,12 +23,28 @@
       border-radius: 1em;
       top: 12px;
       left: 588px;
-      width: 40%;
+      max-width: 40%;
       height: 2.5em;
+
+      .faSearch {
+        margin: 0 1em;
+      }
+
+      input {
+        background-color: var(--principal-contrast);
+        outline: none;
+        height: 90%;
+        border: none;
+        width: 70%;
+      }
     }
 
     .icon {
       margin: 0 1em;
+    }
+
+    .faShoppingBag {
+      font-size: 2em;
     }
   }
 
@@ -35,11 +58,15 @@
       color: var(--font-contrast);
       margin: 0 1.5em;
       text-transform: capitalize;
-    }
+      display: flex;
+      flex-direction: row;
+      align-items: center;
 
-    .icon::before {
-      content: "\07F7";
-      margin-right: 0.3em;
+
+      img {
+        height: 1.5em;
+        margin-right: 0.3em;
+      }
     }
 
   }
