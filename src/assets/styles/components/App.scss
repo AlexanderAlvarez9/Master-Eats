@@ -32,15 +32,15 @@ body {
 }
 
 a:visited {
-  color: var(--visited);
+  color: var(--link);
 }
 
 a:hover {
-  color: var(--hover);
+  color: var(--link);
 }
 
 a:active {
-  color: var(--active);
+  color: var(--link);
 }
 
 ::-webkit-scrollbar {
@@ -59,10 +59,11 @@ a:active {
 
 @mixin btn {
   background-color: var(--secondary);
-  padding: 8px;
+  border: none;
   border-radius: 10px;
   color: var(--font-contrast);
-  border: none;
+  padding: 8px;
+  transition: all 0.1s ease;
 }
 
 @mixin border {

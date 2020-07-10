@@ -17,3 +17,9 @@
     margin: 0.5em;
   }
 }
+
+@media screen and (max-width: 880px) {
+  .Footer {
+    justify-content: center;
+  }
+}
