@@ -1,6 +1,6 @@
 import React from 'react';
 import '../assets/styles/components/Message.scss'
-import success from '../assets/img/undraw_on_the_way_ldaq.png'
+import success from '../assets/img/success.png'
 
 
 const Success = () => {

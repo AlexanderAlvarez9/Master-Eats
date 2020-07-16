@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../assets/styles/components/App.scss';
 
 import Containers from './Containers';
@@ -10,47 +10,14 @@ import Success from '../components/Success';
 import NotFound from '../components/NotFound';
 import CartMain from './Cart';
 import Form from '../pages/Form'
-
 import { Link, BrowserRouter, Route, Switch } from 'react-router-dom';
+import useInitialState from '../hooks/useInitialState';
+
+const API = 'https://my.api.mockaroo.com/mastereats.json?key=60f8dc70';
 
 function App() {
-  const initialState = [
-    {
-      'id': 1,
-      'image': '../assets/img/cerveza.png',
-      'title': 'Carne de res',
-      'price': 12000,
-      'categorie': 'Carnes',
-    },
-    {
-      'id': 2,
-      'image': '../assets/img/cerveza.png',
-      'title': 'Zanahoria',
-      'price': 1000,
-      'categorie': 'Verdura',
-    },
-    {
-      'id': 3,
-      'image': '../assets/img/cerveza.png',
-      'title': 'Yogourt',
-      'price': 3000,
-      'categorie': 'lacteos',
-    },
-    {
-      'id': 4,
-      'image': '../assets/img/cerveza.png',
-      'title': 'Atun',
-      'price': 3500,
-      'categorie': 'Enlatado',
-    },
-    {
-      'id': 5,
-      'image': '../assets/img/cerveza.png',
-      'title': 'Papas',
-      'price': 1500,
-      'categorie': 'Snacks',
-    },
-  ];
+  const initialState = useInitialState(API);
+  const [catego, setCatego] = useState(0);
 
   return (
     <React.Fragment>
@@ -68,7 +35,6 @@ function App() {
                 </Carousel>
               </Categories>
 
-
             )} />
             <Route exact path="/Success" component={Success} />
             <Route exact path="/NotFound" component={NotFound} />
@@ -79,9 +45,9 @@ function App() {
 
           <Containers>
             <ul>
+              <li><Link to="/Form">Login - Register</Link></li>
               <li><Link to="/Success">Success</Link></li>
               <li><Link to="/NotFound">NotFound</Link></li>
-              <li><Link to="/Form">Form</Link></li>
             </ul>
           </Containers>
         </Layout>
