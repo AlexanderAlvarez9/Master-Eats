@@ -1,4 +1,18 @@
 .container {
   margin: 3em auto 0;
   width: 80%;
+
+
+  a:visited {
+    color: var(--visited);
+  }
+
+  a:hover {
+    color: var(--hover);
+  }
+
+  a:active {
+    color: var(--active);
+}
+
 }

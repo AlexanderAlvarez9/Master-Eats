@@ -55,7 +55,7 @@ const Header = () => {
           <div className="Header__brand--logo">
             {/* <img src="" alt="Logo" /> */}
             <Link to="/">
-              <FontAwesomeIcon className="faShoppingBag" icon={faShoppingBag} />
+              <FontAwesomeIcon className="faShoppingBag" icon={faShoppingBag} title="MasterEats" />
             </Link>
             <span className="Header__title">MasterEats</span>
           </div>

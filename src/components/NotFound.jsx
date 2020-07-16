@@ -1,6 +1,6 @@
 import React from 'react';
 import '../assets/styles/components/Message.scss'
-import empty from '../assets/img/undraw_empty_street_sfxm.png'
+import empty from '../assets/img/NotFound.png'
 
 const NotFound = () => {
   return (

@@ -4,7 +4,7 @@
   background-color: var(--card);
   border-radius: 1em;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   flex-direction: column;
   padding: 0.5em;
   text-align: center;
@@ -12,6 +12,9 @@
   max-width: 12em;
 
   &--img {
+    border-radius: 0.5em;
+    height: 150px;
+    width: 150px;
     margin: 0 auto;
   }
 
@@ -35,5 +38,18 @@
     margin: 0 auto;
     width: 10em;
     outline: none;
+  }
+
+
+  &--button:hover {
+    box-shadow: inset 0 0 20px rgba(49, 138, 172, 0.5), 0 0 20px rgba(49, 138, 172, 0.4);
+    outline-color: rgba(49, 138, 172, 0);
+    outline-offset: 80px;
+    text-shadow: 1px 1px 6px #fff;
+  }
+
+  &--button:active {
+    box-shadow: -1px -1px 1px 0 #000000bb;
+    transform: translate(3px, 3px);
   }
 }

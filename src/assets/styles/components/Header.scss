@@ -9,7 +9,7 @@
   &__brand {
     color: var(--font-contrast);
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     padding: 1em 0;
 
     &--search {
@@ -23,7 +23,7 @@
       border-radius: 1em;
       top: 12px;
       left: 588px;
-      max-width: 40%;
+      width: 40%;
       height: 2.5em;
 
       .faSearch {
@@ -52,20 +52,48 @@
     padding: 1em 0;
     display: flex;
     justify-content: center;
+    user-select: none;
 
-
-    span {
+    .categorie {
+      align-items: center;
+      border-radius: 0.5em;
       color: var(--font-contrast);
-      margin: 0 1.5em;
-      text-transform: capitalize;
       display: flex;
       flex-direction: row;
-      align-items: center;
-
+      height: 2em;
+      padding: 1em 1.5em;
+      text-transform: capitalize;
 
       img {
         height: 1.5em;
         margin-right: 0.3em;
+      }
+    }
+
+    span:hover {
+      background-color: #b72447;
+    }
+  }
+}
+
+
+
+@media screen and (max-width: 1024px) {
+  .Header {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .Header {
+
+    &__title {
+      display: none;
+    }
+
+    &__categories {
+      img {
+        display: none;
       }
     }
 
