@@ -15,6 +15,7 @@ import useInitialState from '../hooks/useInitialState';
 
 const API = 'https://my.api.mockaroo.com/mastereats.json?key=60f8dc70';
 
+
 function App() {
   const initialState = useInitialState(API);
   const [catego, setCatego] = useState(0);
