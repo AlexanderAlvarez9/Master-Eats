@@ -119,6 +119,7 @@ body {
 }
 
 .back-img {
+  width: 100%;
   margin-top: 65px;
   margin-left: 100px;
 }
@@ -133,4 +134,4 @@ footer {
   height: 80px;
   background: #E7305B;
 }
-/*# sourceMappingURL=Account.css.map */
+/*# sourceMappingURL=UserAccount.css.map */
