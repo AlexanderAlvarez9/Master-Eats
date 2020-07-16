@@ -15,7 +15,9 @@ deploy:
   keep-history: true
   github-token: $GITHUB_TOKEN
   local-dir: dist/
+  project_name: "MasterEats"
   target-branch: gh-pages
-  commit_message: "Deploy Release from: "%{git_branch} & with message: %{git_commit_msg}"
+  commit_message: "Deploy Release from: %{git_branch} & with message: %{git_commit_msg}"
+  verbose: true
   on:
     branch: development
