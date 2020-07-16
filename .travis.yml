@@ -13,7 +13,7 @@ deploy:
   edge: true,
   cleanup: false
   keep_history: true
-  token: $GITHUB_TOKEN
+  github_token: $GITHUB_TOKEN
   local_dir: dist/
   project_name: "MasterEats"
   target_branch: gh-pages
