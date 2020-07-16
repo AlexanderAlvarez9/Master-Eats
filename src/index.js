@@ -1,6 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import App from "./containers/App";
 
-import UserAccount from "./components/UserAccount";
-
-ReactDOM.render(<UserAccount />, document.getElementById("app"));
+ReactDOM.render(<App />, document.getElementById("app"));

@@ -1,0 +1,72 @@
+/*--- VARS ----*/
+
+:root {
+  --principal: #E7305B;
+  --principal-contrast: #F094AA;
+  --secondary: #56C272;
+  --background: #F7F5DD;
+  --alert: #00BB2D;
+  --card: #fff;
+  --font: #4c5454;
+  --font-contrast: #fff;
+  --padding: 1.5em;
+  --panel-padding: 0 0.3em 0 0.3em;
+  --margin: 2em;
+  --gap: 1em;
+  --radius: 1em;
+  --background-gray: #EFEFEF;
+  --border: 1px solid #f1f1f1;
+
+  --link: #fff;
+  --visited: #56C272;
+  --hover: #F00;
+  --active: #88ff00;
+}
+
+/*--- END VARS ----*/
+
+body {
+  background-color: var(--background);
+  margin: 0;
+  overflow-x: hidden;
+}
+
+a:visited {
+  color: var(--link);
+}
+
+a:hover {
+  color: var(--link);
+}
+
+a:active {
+  color: var(--link);
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+@mixin btn {
+  background-color: var(--secondary);
+  border: none;
+  border-radius: 10px;
+  color: var(--font-contrast);
+  padding: 8px;
+  transition: all 0.1s ease;
+}
+
+@mixin border {
+  border: 1px solid #f1f1f1;
+  box-shadow: 1px 1px 1px 1px #00000029;
+}

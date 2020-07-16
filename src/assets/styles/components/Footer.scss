@@ -1,0 +1,25 @@
+.Footer {
+  background-color: var(--principal);
+  display: flex;
+  justify-content: flex-end;
+  padding: 0.7em 0;
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+
+  &--social-networks {
+    padding: 0 1em;
+  }
+
+  .socialIcon {
+    color: var(--font-contrast);
+    font-size: 1.5em;
+    margin: 0.5em;
+  }
+}
+
+@media screen and (max-width: 880px) {
+  .Footer {
+    justify-content: center;
+  }
+}
