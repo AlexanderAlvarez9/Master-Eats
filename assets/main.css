@@ -279,6 +279,112 @@ a:active {
     font-size: xx-large;
     color: var(--principal); }
 
+.UserAccount .container {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 12em; }
+  .UserAccount .container__menu {
+    width: 500px;
+    height: 407px;
+    background: #FFFFFF;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 10px; }
+    .UserAccount .container__menu ul {
+      list-style: none;
+      text-decoration: none; }
+      .UserAccount .container__menu ul li {
+        padding-bottom: 24px;
+        padding-left: 20px; }
+        .UserAccount .container__menu ul li a {
+          text-decoration: none;
+          color: #4C5454; }
+        .UserAccount .container__menu ul li a:hover {
+          color: #E7305B; }
+  .UserAccount .container__menu-settings {
+    width: 1100px;
+    height: fit-content;
+    background: #FFFFFF;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 10px; }
+  .UserAccount .container h2 {
+    font-size: 24px;
+    width: 107px;
+    height: 29px;
+    margin-top: 40px;
+    margin-left: 20px;
+    margin-bottom: 40px; }
+
+.UserAccount .form-wrapper {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 30px; }
+
+.UserAccount .form-row label {
+  font-family: "Lato", sans-serif;
+  font-size: 20px; }
+
+.UserAccount .form-row input {
+  width: 495px;
+  height: 48px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: none;
+  background: #F7F5DD; }
+
+.UserAccount .form-button {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 28px; }
+  .UserAccount .form-button button {
+    width: 172px;
+    height: 51px;
+    background: #56C272;
+    border: none;
+    color: #FFFFFF;
+    border-radius: 10px;
+    margin-top: 40px;
+    margin-bottom: 25px; }
+
+.UserAccount .back-img {
+  width: 100%;
+  margin-top: 65px; }
+  .UserAccount .back-img img {
+    margin-left: 100px;
+    width: 400px;
+    height: 325px; }
+
+/*----------------------------------------------MEDIA QUERIES----------------------------------------------*/
+@media (max-width: 1600px) {
+  .container__menu-settings {
+    width: 300px;
+    margin: 0 1em; }
+  form {
+    display: block; }
+  .form-wrapper {
+    width: 70%;
+    padding: 10px; } }
+
+@media (max-width: 1204px) {
+  .container {
+    width: 60%; }
+  .container__menu-settings {
+    margin: 0 2em; } }
+
+@media (max-width: 1000px) {
+  .container {
+    display: flex;
+    flex-wrap: wrap; }
+  .container__menu-settings {
+    margin-top: 2em; } }
+
+@media (max-width: 520px) {
+  .container__menu-settings {
+    margin: 2em 1em; } }
+
 body {
   background-color: #f7f5dd;
   color: #4c5454;
