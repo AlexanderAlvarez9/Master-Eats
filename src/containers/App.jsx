@@ -7,6 +7,7 @@ import Categories from '../components/Categories';
 import Carousel from '../components/Carousel';
 import Card from '../components/Card';
 import Success from '../components/Success';
+import UserAccount from '../components/UserAccount';
 import NotFound from '../components/NotFound';
 import CartMain from './Cart';
 import Form from '../pages/Form'
@@ -41,6 +42,7 @@ function App() {
             <Route exact path="/NotFound" component={NotFound} />
             <Route exact path="/CartMain" component={CartMain} />
             <Route exact path="/Form" component={Form} />
+            <Route exact path="/UserAccount" component={UserAccount} />
             {/* <Route component={NotFound} /> */}
           </Switch>
 
