@@ -44,11 +44,11 @@ const UserAccount = () => {
             </div>
           </form>
         </div>
-        <div className="back-img">
+    </div>
+    <div className="back-img">
           <img src="../src/assets/img/undraw_my_current_location_om7g.svg" alt="" />
         </div>
       </div>
-    </div>
   )
 }
 
