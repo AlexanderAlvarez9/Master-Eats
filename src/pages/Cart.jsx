@@ -1,4 +1,5 @@
 import React from 'react';
+import '../assets/styles/components/Globales.scss';
 import '../assets/styles/components/CartMain.scss';
 import '../assets/styles/components/CartIcon.scss';
 import CartProducts from '../components/CartProducts';
