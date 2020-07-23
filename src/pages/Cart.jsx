@@ -1,12 +1,15 @@
 import React from 'react';
-import '../assets/styles/Styles.scss';
-import CartMain from '../components/CartMain';
+import '../assets/styles/components/CartMain.scss';
+import '../assets/styles/components/CartIcon.scss';
+import CartProducts from '../components/CartProducts';
+import CartSumary from '../components/CartSumary';
 // import Container from '../containers/Containers';
 
-const Cart = ({ initialState }) => (
+const Cart = ({ state }) => (
   // <Container>
-  <div className='Cart'>
-    <CartMain state={initialState} />
+  <div className='content'>
+    <CartProducts state={state} />
+    <CartSumary />
   </div>
   // </Container>
 );

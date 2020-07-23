@@ -1,5 +1,7 @@
+@import './Variables';
+
 @mixin btn {
-  background-color: $primary-color;
+  background-color: $buttons-color;
   padding: 8px;
   border-radius: 10px;
   color: $light-color;

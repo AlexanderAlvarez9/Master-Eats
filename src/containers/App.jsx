@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import '../assets/styles/components/App.scss';
+import '../assets/styles/components/Globales.scss';
 
 import { Link, BrowserRouter, Route, Switch } from 'react-router-dom';
 import Containers from './Containers';
@@ -44,9 +45,7 @@ function App() {
             <Route exact path='/Success' component={Success} />
             <Route exact path='/NotFound' component={NotFound} />
             <Route exact path='/CartMain'>
-              {initialState.length > 0 && (
-                <CartMain initialState={initialState} />
-              )}
+              {initialState.length > 0 && <CartMain state={initialState} />}
             </Route>
             <Route exact path='/Form' component={Form} />
             <Route exact path='/UserAccount' component={UserAccount} />
