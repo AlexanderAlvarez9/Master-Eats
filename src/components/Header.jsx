@@ -55,7 +55,7 @@ const Header = () => {
           <div className="Header__brand--logo">
             {/* <img src="" alt="Logo" /> */}
             <Link to="/">
-              <FontAwesomeIcon className="faShoppingBag" icon={faShoppingBag} />
+              <FontAwesomeIcon className="faShoppingBag" icon={faShoppingBag} title="MasterEats" />
             </Link>
             <span className="Header__title">MasterEats</span>
           </div>
@@ -64,9 +64,9 @@ const Header = () => {
             <input className="" type="text" name="search" id="search" placeholder={'Encuentra tu Producto'} />
           </div>
           <div className="Header__brand--icons">
-            <span className="icon">
+            <Link className="icon" to="/UserAccount">
               <FontAwesomeIcon className="faUser" icon={faUser} />
-            </span>
+            </Link>
             <Link className="icon" to="/CartMain">
               <FontAwesomeIcon className="faShoppingCart" icon={faShoppingCart} />
             </Link>

@@ -1,0 +1,167 @@
+$font-family: 'Lato',
+sans-serif;
+$font-size: 16px;
+$titles-size: 24px;
+$subtitles-details: 20px;
+$border-principal: 10px;
+
+$background-color: #F7F5DD;
+$background-card: #FFFFFF;
+$hover-color: #E7305B;
+$button1: #56C272;
+$text-color: #4C5454;
+
+.UserAccount {
+  .container {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: space-around;
+    //flex-wrap: wrap;
+    margin-top: 12em;
+    //border: 1px solid red;
+    &__menu {
+      width: 500px;
+      height: 407px;
+      background: $background-card;
+      box-shadow: 0px 3px 6px #00000029;
+      border-radius: $border-principal;
+
+      ul {
+        list-style: none;
+        text-decoration: none;
+
+        li {
+          padding-bottom: 24px;
+          padding-left: 20px;
+
+          a {
+            text-decoration: none;
+            color: $text-color;
+          }
+
+          a:hover {
+            color: $hover-color;
+          }
+        }
+      }
+    }
+
+    &__menu-settings {
+      width: 1100px;
+      height: fit-content;
+      background: $background-card;
+      box-shadow: 0px 3px 6px #00000029;
+      border-radius: $border-principal;
+    }
+
+    h2 {
+      font-size: $titles-size;
+      width: 107px;
+      height: 29px;
+      margin-top: 40px;
+      margin-left: 20px;
+      margin-bottom: 40px;
+
+    }
+  }
+
+  .form-wrapper {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 30px;
+  }
+
+  .form-row {
+    label {
+      font-family: $font-family;
+      font-size: $subtitles-details;
+    }
+
+    input {
+      width: 495px;
+      height: 48px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: none;
+      background: $background-color;
+    }
+  }
+
+  .form-button {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 28px;
+
+    button {
+      width: 172px;
+      height: 51px;
+      background: $button1;
+      border: none;
+      color: $background-card;
+      border-radius: $border-principal;
+      margin-top: 40px;
+      margin-bottom: 25px;
+    }
+  }
+
+ .back-img {
+    width: 100%;
+    margin-top: 65px;
+    //border: 1px solid orangered;
+
+    img {
+      margin-left: 100px;
+      width: 400px;
+      height: 325px;
+    }
+  }
+
+}
+
+/*----------------------------------------------MEDIA QUERIES----------------------------------------------*/
+
+@media (max-width: 1600px){
+  .container__menu-settings{
+    width: 300px;
+    margin:  0 1em;
+    //border: 1px solid blue;
+  }
+  form{
+    display: block;
+    //border: 1px solid violet;
+  }
+  .form-wrapper{
+    width: 70%;
+    padding: 10px;
+  }
+
+}
+
+@media (max-width: 1204px) {
+  .container {
+  width: 60%;
+  }
+  .container__menu-settings{
+    margin: 0 2em;
+    //border: 1px solid blue;
+  }
+}
+
+@media(max-width: 1000px){
+  .container{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .container__menu-settings{
+    margin-top: 2em;
+  }
+}
+
+@media(max-width: 520px){
+  .container__menu-settings{
+    margin: 2em 1em;
+  }
+}

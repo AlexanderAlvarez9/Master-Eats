@@ -11,11 +11,13 @@ script:
 deploy:
   provider: pages
   edge: true,
-  cleanup: true
-  keep-history: true
-  github-token: $GITHUB_TOKEN
-  local-dir: dist/
-  target-branch: gh-pages
-  commit_message: "Deploy Release from: "%{git_branch} & with message: %{git_commit_msg}"
+  cleanup: false
+  keep_history: true
+  github_token: $GITHUB_TOKEN
+  local_dir: dist/
+  project_name: "MasterEats"
+  target_branch: gh-pages
+  commit_message: "Deploy Release from: %{git_branch} & with message: %{git_commit_msg}"
+  verbose: true
   on:
     branch: development

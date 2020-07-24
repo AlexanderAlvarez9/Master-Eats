@@ -1,12 +1,13 @@
 {
-  "name": "MasterEats",
+  "name": "mastereats",
   "version": "1.0.0",
   "description": "Proyecto Grupal Platzi Master - Cohort 3 - Grupo Ana - Team JS",
   "main": "index.js",
   "scripts": {
     "test": "jest",
     "build": "webpack --mode development",
-    "start": "webpack-dev-server --open --mode development"
+    "start": "webpack-dev-server --open --mode development",
+    "dev": "nodemon src/server.js"
   },
   "repository": {
     "type": "git",
@@ -28,17 +29,14 @@
     "@fortawesome/react-fontawesome": "^0.1.11",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-router-dom": "^5.2.0"
+    "react-router-dom": "^5.2.0",
+    "express": "^4.17.1",
+    "morgan": "^1.10.0"
   },
   "devDependencies": {
     "@babel/core": "^7.10.4",
     "@babel/preset-env": "^7.10.4",
     "@babel/preset-react": "^7.10.4",
-    "@fortawesome/fontawesome-svg-core": "^1.2.29",
-    "@fortawesome/free-brands-svg-icons": "^5.13.1",
-    "@fortawesome/free-solid-svg-icons": "^5.13.1",
-    "@fortawesome/react-fontawesome": "^0.1.11",
-    "@svgr/webpack": "^5.4.0",
     "babel-eslint": "^10.1.0",
     "babel-loader": "^8.1.0",
     "css-loader": "^3.6.0",
@@ -56,6 +54,7 @@
     "sass-loader": "^8.0.2",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.12",
-    "webpack-dev-server": "^3.11.0"
+    "webpack-dev-server": "^3.11.0",
+    "nodemon": "^2.0.4"
   }
 }
