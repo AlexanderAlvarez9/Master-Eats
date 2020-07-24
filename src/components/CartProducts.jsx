@@ -2,6 +2,7 @@
 import React from 'react';
 import CartList from './CartList';
 import CartCards from './CartCards';
+import '../assets/styles/components/CartProducts.scss';
 
 const Products = ({ state }) => (
   <div>
