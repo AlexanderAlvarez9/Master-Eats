@@ -35,7 +35,7 @@ const Sumary = () => (
     <div className='sumary__pay--title'>
       <h1>Total: $610.00</h1>
     </div>
-    {/* <button>Completar pedido</button> */}
+    <button type='button'>Completar pedido</button>
   </section>
 );
 
