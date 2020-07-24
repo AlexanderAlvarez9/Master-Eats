@@ -2,14 +2,19 @@
 /* eslint-disable jsx-quotes */
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMapMarkedAlt, faCreditCard, faEdit } from '@fortawesome/free-solid-svg-icons';
+import {
+  faMapMarkedAlt,
+  faCreditCard,
+  faEdit,
+} from '@fortawesome/free-solid-svg-icons';
+import '../assets/styles/components/CartSumary.scss';
 
 const Sumary = () => (
-  <section className="sumary">
+  <section className='sumary'>
     <h2>Pedido</h2>
-    <div className="sumary__location">
+    <div className='sumary__location'>
       <FontAwesomeIcon icon={faMapMarkedAlt} />
-      <div className="sumary__location--location">
+      <div className='sumary__location--location'>
         <span>
           <b>Direccion de entrega</b>
         </span>
@@ -17,9 +22,9 @@ const Sumary = () => (
       </div>
       <FontAwesomeIcon icon={faEdit} />
     </div>
-    <div className="sumary__pay">
+    <div className='sumary__pay'>
       <FontAwesomeIcon icon={faCreditCard} />
-      <div className="sumary__pay--pay">
+      <div className='sumary__pay--pay'>
         <span>
           <b>Metodo de pago:</b>
         </span>
@@ -27,7 +32,7 @@ const Sumary = () => (
       </div>
       <FontAwesomeIcon icon={faEdit} />
     </div>
-    <div className="sumary__pay--title">
+    <div className='sumary__pay--title'>
       <h1>Total: $610.00</h1>
     </div>
     {/* <button>Completar pedido</button> */}
