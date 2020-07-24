@@ -18,7 +18,8 @@ module.exports = {
         /* Regla principal */ test: /\.(js|jsx)$/ /* Identificación de los archivos js y jsx */,
         exclude: /node_modules/ /* Excluye la carpeta node_modules */,
         use: {
-          loader: 'babel-loader' /* Hay que usar el loader para que babel haga el trabajo */,
+          loader:
+            'babel-loader' /* Hay que usar el loader para que babel haga el trabajo */,
         },
       },
       {
@@ -50,6 +51,9 @@ module.exports = {
       },
     ],
   } /* Dicta las reglas necesarias para el proyecto */,
+  devServer: {
+    historyApiFallback: true,
+  },
   plugins: [
     new HtmlWebpackPlugin({
       template: './public/index.html' /* Donde esta ubicado el template */,

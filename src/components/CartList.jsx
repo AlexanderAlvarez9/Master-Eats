@@ -1,91 +1,32 @@
 /* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable jsx-quotes */
-import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlusCircle, faMinusCircle, faTimesCircle } from '@fortawesome/free-solid-svg-icons';
-import cerveza from '../assets/img/cerveza.png';
+import React, { useState, useEffect } from 'react';
 
-const CartList = () => (
-  <section className="products__list">
-    <div className="products__list--title">
-      <span>Unidades</span>
-      <span>Costo</span>
-      <span>Total</span>
-    </div>
-    <div className="item">
-      <img src={cerveza} width="67" alt="Foto" />
-      <p>Cerveza Botella</p>
-      <div className="item__cantidad">
-        <a rel="stylesheet" href="#">
-          <FontAwesomeIcon icon={faMinusCircle} />
-        </a>
-        <span>12</span>
-        <a rel="stylesheet" href="#">
-          <FontAwesomeIcon icon={faPlusCircle} />
-        </a>
+import cerveza from '../assets/img/cerveza.png';
+import CartItem from './CartItem';
+
+const CartList = ({ state }) => {
+  const [products, setProduct] = useState(state);
+
+  const handleDelete = (id) => {
+    const index = products.findIndex((product) => product.id === id);
+    products.splice(index, 1);
+    setProduct([...products]);
+  };
+
+  return (
+    <section className='products__list'>
+      <div className='products__list--title'>
+        <span>Unidades</span>
+        <span>Costo</span>
+        <span>Total</span>
       </div>
-      <p>$12.000</p>
-      <p>144.000</p>
-      <a rel="stylesheet" href="#">
-        <FontAwesomeIcon icon={faTimesCircle} />
-      </a>
-    </div>
-    <div className="item">
-      <img src={cerveza} width="67" alt="Foto" />
-      <p>Cerveza Botella</p>
-      <div className="item__cantidad">
-        <a rel="stylesheet" href="#">
-          <FontAwesomeIcon icon={faMinusCircle} />
-        </a>
-        <span>12</span>
-        <a rel="stylesheet" href="#">
-          <FontAwesomeIcon icon={faPlusCircle} />
-        </a>
-      </div>
-      <p>$12.000</p>
-      <p>144.000</p>
-      <a rel="stylesheet" href="#">
-        <FontAwesomeIcon icon={faTimesCircle} />
-      </a>
-    </div>
-    <div className="item">
-      <img src={cerveza} width="67" alt="Foto" />
-      <p>Cerveza Botella</p>
-      <div className="item__cantidad">
-        <a rel="stylesheet" href="#">
-          <FontAwesomeIcon icon={faMinusCircle} />
-        </a>
-        <span>12</span>
-        <a rel="stylesheet" href="#">
-          <FontAwesomeIcon icon={faPlusCircle} />
-        </a>
-      </div>
-      <p>$12.000</p>
-      <p>144.000</p>
-      <a rel="stylesheet" href="#">
-        <FontAwesomeIcon icon={faTimesCircle} />
-      </a>
-    </div>
-    <div className="item">
-      <img src={cerveza} width="67" alt="Foto" />
-      <p>Cerveza Botella</p>
-      <div className="item__cantidad">
-        <a rel="stylesheet" href="#">
-          <FontAwesomeIcon icon={faMinusCircle} />
-        </a>
-        <span>12</span>
-        <a rel="stylesheet" href="#">
-          <FontAwesomeIcon icon={faPlusCircle} />
-        </a>
-      </div>
-      <p>$12.000</p>
-      <p>144.000</p>
-      <a rel="stylesheet" href="#">
-        <FontAwesomeIcon icon={faTimesCircle} />
-      </a>
-    </div>
-  </section>
-);
+      {products.map((item) => (
+        <CartItem item={item} key={item.id} handleDelete={handleDelete} />
+      ))}
+    </section>
+  );
+};
 
 export default CartList;
