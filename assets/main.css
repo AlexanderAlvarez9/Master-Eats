@@ -3,8 +3,6 @@
 @import url(https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap);
-@import url(https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap);
-@import url(https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap);
 /*--- VARS ----*/
 :root {
   --principal: #E7305B;
@@ -415,12 +413,19 @@ a:active {
 
 /*---------------------------------------------- END MEDIA QUERIES----------------------------------------------*/
 
-body {
-  background-color: #f7f5dd;
-  color: #4c5454;
-  font-family: 'Lato', sans-serif; }
-  body a {
-    text-decoration: none; }
+.fa-minus-circle,
+.fa-times-circle {
+  color: #e7305b; }
+
+.fa-plus-circle {
+  color: #56c272; }
+
+.fa-minus-circle,
+.fa-plus-circle {
+  font-size: 20px; }
+
+.fa-times-circle {
+  font-size: 25px; }
 
 .content {
   display: grid;
@@ -487,27 +492,6 @@ body {
         border-radius: 10px;
         color: #ffffff;
         border: none; }
-
-.fa-minus-circle,
-.fa-times-circle {
-  color: #e7305b; }
-
-.fa-plus-circle {
-  color: #56c272; }
-
-.fa-minus-circle,
-.fa-plus-circle {
-  font-size: 20px; }
-
-.fa-times-circle {
-  font-size: 25px; }
-
-body {
-  background-color: #f7f5dd;
-  color: #4c5454;
-  font-family: 'Lato', sans-serif; }
-  body a {
-    text-decoration: none; }
 
 .content {
   display: grid;
@@ -583,7 +567,7 @@ body {
   max-height: 280px;
   margin-top: 23px;
   border-radius: 10px;
-  padding: 0 30px 10px 30px; }
+  padding: 15px 30px 10px 30px; }
   .sumary span {
     font-size: 15px; }
   .sumary svg {
@@ -614,7 +598,7 @@ body {
         color: #e7305b; }
   .sumary button {
     width: 90%;
-    margin: 0 5%;
+    margin: 15px 5%;
     background-color: #56c272;
     padding: 8px;
     border-radius: 10px;
