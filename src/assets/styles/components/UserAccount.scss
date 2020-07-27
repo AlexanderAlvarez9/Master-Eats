@@ -11,26 +11,37 @@ $hover-color: #E7305B;
 $button1: #56C272;
 $text-color: #4C5454;
 
-.UserAccount {
-  .container {
-    width: 100%;
-    height: fit-content;
-    display: flex;
-    justify-content: space-around;
-    //flex-wrap: wrap;
-    margin-top: 12em;
-    //border: 1px solid red;
+
+.UserAccount{
+ // margin: 0 auto;
+ // padding: 2.5em;
+  //border: 1px solid blue;
+  //background: yellow;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  &__container{
+    padding: 4em;
     &__menu {
-      width: 500px;
+      width: 435px;
       height: 407px;
       background: $background-card;
       box-shadow: 0px 3px 6px #00000029;
       border-radius: $border-principal;
+      h2 {
+        font-size: $titles-size;
+        width: 107px;
+        height: 29px;
+        padding-top: 40px;
+        margin-left: 20px;
+        padding-bottom: 70px;
 
+      }
       ul {
         list-style: none;
         text-decoration: none;
-
         li {
           padding-bottom: 24px;
           padding-left: 20px;
@@ -46,122 +57,130 @@ $text-color: #4C5454;
         }
       }
     }
+  }
+}
+.UserAccount__container__menu-settings{
+  margin-bottom: 4em;
+  width: 435px;
+  background: $background-card;
+  box-shadow: 0px 3px 6px #00000029;
+  border-radius: $border-principal;
 
-    &__menu-settings {
-      width: 1100px;
-      height: fit-content;
-      background: $background-card;
-      box-shadow: 0px 3px 6px #00000029;
-      border-radius: $border-principal;
-    }
+  h2 {
+    width: 307px;
+    height: 29px;
+    padding-top: 40px;
+    margin-left: 20px;
+    padding-bottom: 40px;
 
-    h2 {
-      font-size: $titles-size;
-      width: 107px;
-      height: 29px;
-      margin-top: 40px;
-      margin-left: 20px;
-      margin-bottom: 40px;
-
-    }
   }
 
-  .form-wrapper {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin-top: 30px;
+}
+.form-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.form-row {
+  padding-top: 15px;
+  label {
+    font-family: $font-family;
+    font-size: $subtitles-details;
   }
 
-  .form-row {
-    label {
-      font-family: $font-family;
-      font-size: $subtitles-details;
-    }
-
-    input {
-      width: 495px;
-      height: 48px;
-      margin-top: 5px;
-      border-radius: 5px;
-      border: none;
-      background: $background-color;
-    }
+  input {
+    width: 400px;
+    height: 48px;
+    margin-top: 15px;
+    border-radius: 5px;
+    border: none;
+    background: $background-color;
   }
+}
 
-  .form-button {
-    display: flex;
-    justify-content: flex-end;
-    padding-right: 28px;
+.form-button {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 4.5rem;
 
-    button {
-      width: 172px;
-      height: 51px;
-      background: $button1;
-      border: none;
-      color: $background-card;
-      border-radius: $border-principal;
-      margin-top: 40px;
-      margin-bottom: 25px;
-    }
+  button {
+    width: 172px;
+    height: 51px;
+    background: $button1;
+    border: none;
+    color: $background-card;
+    border-radius: $border-principal;
+    margin-top: 40px;
+    margin-bottom: 25px;
+    cursor: pointer;
   }
+}
 
- .back-img {
-    width: 100%;
-    margin-top: 65px;
-    //border: 1px solid orangered;
-
-    img {
-      margin-left: 100px;
-      width: 400px;
-      height: 325px;
-    }
-  }
-
+.back-img{
+  //border: 1px solid red;
+  text-align: center;
 }
 
 /*----------------------------------------------MEDIA QUERIES----------------------------------------------*/
 
-@media (max-width: 1600px){
-  .container__menu-settings{
-    width: 300px;
-    margin:  0 1em;
-    //border: 1px solid blue;
+@media screen and (min-width: 1000px){
+  .UserAccount{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    width: 100%;
+    //background: red;
+    &__container{
+      padding: 4em;
+      align-self: flex-start;
+    }
   }
-  form{
-    display: block;
-    //border: 1px solid violet;
-  }
-  .form-wrapper{
-    width: 70%;
-    padding: 10px;
+  .UserAccount__container__menu-settings{
+    margin-top: 4em;
   }
 
-}
-
-@media (max-width: 1204px) {
-  .container {
-  width: 60%;
-  }
-  .container__menu-settings{
-    margin: 0 2em;
-    //border: 1px solid blue;
-  }
-}
-
-@media(max-width: 1000px){
-  .container{
+  .form-wrapper {
     display: flex;
-    flex-wrap: wrap;
   }
-  .container__menu-settings{
-    margin-top: 2em;
+  h2 {
+    font-size: $titles-size;
+    width: 107px;
+    height: 29px;
+    padding-top: 40px;
+    margin-left: -40px;
+    padding-bottom: 70px;
+
+  }
+  .form-button {
+    padding-right: 1rem;
+  }
+  .back-img{
+    //border: 1px solid blue;
+    text-align: start;
+    margin-left: 7.5em;
   }
 }
 
-@media(max-width: 520px){
-  .container__menu-settings{
-    margin: 2em 1em;
+@media screen and (min-width: 1500px){
+  .UserAccount{
+    display: grid;
+    grid-template-columns: 420px 1100px;
+    gap: 80px;
+    //background: blue;
   }
+  .UserAccount__container__menu-settings{
+    width: 1100px;
+    h2 {
+      padding-top: 40px;
+      padding-left: 45px;
+
+    }
+  }
+  .form-button {
+    padding-right: 4.5rem;
+  }
+
 }
+
+/*---------------------------------------------- END MEDIA QUERIES----------------------------------------------*/
