@@ -15,7 +15,9 @@ import CartMain from '../pages/Cart';
 import Form from '../pages/Form';
 import useInitialState from '../hooks/useInitialState';
 
-const API = 'https://my.api.mockaroo.com/mastereats.json?key=65f14490';
+const API = 'https://my.api.mockaroo.com/mastereats.json?key=60f8dc70';
+//Use in emergency
+//const API = 'https://my.api.mockaroo.com/mastereats.json?key=65f14490';
 
 function App() {
   const initialState = useInitialState(API);
