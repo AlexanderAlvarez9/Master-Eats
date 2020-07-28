@@ -321,19 +321,21 @@ a:active {
             color: #4C5454; }
           .UserAccount__container__menu ul li a:hover {
             color: #E7305B; }
-
-.UserAccount__container__menu-settings {
-  margin-bottom: 4em;
-  width: 435px;
-  background: #FFFFFF;
-  box-shadow: 0px 3px 6px #00000029;
-  border-radius: 10px; }
-  .UserAccount__container__menu-settings h2 {
-    width: 307px;
-    height: 29px;
-    padding-top: 40px;
-    margin-left: 20px;
-    padding-bottom: 40px; }
+  .UserAccount__container__menu-settings {
+    margin-bottom: 4em;
+    width: 435px;
+    background: #FFFFFF;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 10px; }
+    .UserAccount__container__menu-settings h2 {
+      width: 307px;
+      height: 29px;
+      padding-top: 40px;
+      margin-left: 20px;
+      padding-bottom: 40px; }
+    .UserAccount__container__menu-settings .order {
+      padding: 1em 2em;
+      margin: 1em; }
 
 .form-wrapper {
   display: flex;
