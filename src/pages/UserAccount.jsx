@@ -27,7 +27,6 @@ const UserAccount = () => (
         <Route path="/UserAccountAdress" component={UserAccountAdress} />
         <Route path="/UserAccountPayment" component={UserAccountPayment} />
         <Route path="/UserAccountOrders" component={UserAccountOrders} />
-        <Route path="/" component={NotFound} />
       </div>
     </div>
     <div className="back-img">
