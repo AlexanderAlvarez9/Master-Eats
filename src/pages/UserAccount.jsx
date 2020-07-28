@@ -5,7 +5,7 @@ import UserAccountDetails from '../components/UserAccountDetails';
 import UserAccountOrders from '../components/UserAccountOrders';
 import UserAccountAdress from '../components/UserAccountAdress';
 import UserAccountPayment from '../components/UserAccountPayment';
-
+import NotFound from './NotFound';
 
 const UserAccount = () => (
   <BrowserRouter>
@@ -27,6 +27,7 @@ const UserAccount = () => (
         <Route path="/UserAccountAdress" component={UserAccountAdress} />
         <Route path="/UserAccountPayment" component={UserAccountPayment} />
         <Route path="/UserAccountOrders" component={UserAccountOrders} />
+        <Route path="/" component={NotFound} />
       </div>
     </div>
     <div className="back-img">
