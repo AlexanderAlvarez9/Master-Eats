@@ -21,7 +21,7 @@ const CartItem = ({ item, handleDelete }) => {
 
   return (
     <div className='item' key={item.id}>
-      <img src={item.image} width='67' alt='Foto' />
+      <img src={item.image} width='80' height='80' alt={item.name} />
       <p>{item.title}</p>
       <div className='item__cantidad'>
         <a rel='stylesheet' href='#' onClick={handleMinus}>

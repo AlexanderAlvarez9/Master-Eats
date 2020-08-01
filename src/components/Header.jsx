@@ -69,9 +69,9 @@ const Header = () => {
             <Link className="icon" to="/cart">
               <FontAwesomeIcon className="faShoppingCart" icon={faShoppingCart} />
             </Link>
-            <span className="icon">
+            <Link className="icon" to="/admin">
               <FontAwesomeIcon className="faCog" icon={faCog} />
-            </span>
+            </Link>
           </div>
         </section>
 
