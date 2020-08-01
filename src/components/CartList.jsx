@@ -16,11 +16,6 @@ const CartList = ({ state }) => {
     });
     setProduct([...products]);
   };
-  // const handleDelete = (id) => {
-  //   const index = products.findIndex((product) => product.id === id);
-  //   products.splice(index, 1);
-  //   setProduct([...products]);
-  // };
 
   return (
     <section className='products__list'>

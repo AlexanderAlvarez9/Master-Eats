@@ -10,6 +10,7 @@ import ProductsContainer from '../components/ProductsContainer';
 import Card from '../components/Card';
 import Success from '../pages/Success';
 import UserAccount from '../pages/UserAccount';
+import AdminCMS from '../pages/AdminCMS';
 import NotFound from '../pages/NotFound';
 import CartMain from '../pages/Cart';
 import Form from '../pages/Form';
@@ -51,6 +52,7 @@ function App() {
               </Route>
               <Route exact path='/sign' component={Form} />
               <Route exact path='/account' component={UserAccount} />
+              <Route exact path='/admin' component={AdminCMS} />
               <Route component={NotFound} />
             </Switch>
 
