@@ -10,6 +10,7 @@ const useInitialState = (API) => {
     fetch(API)
       .then(response => response.json())
       .then(data => setData(data))
+      // .then(() => console.log(setData(data)))
       .catch(err => console.log(err))
   }, []);
   return data

@@ -1,16 +1,19 @@
-@import './Variables';
+@import '../../assets/styles/components/Variables.scss';
 
 .fa-minus-circle,
 .fa-times-circle {
   color: $accent-color;
 }
+
 .fa-plus-circle {
   color: $buttons-color;
 }
+
 .fa-minus-circle,
 .fa-plus-circle {
   font-size: 20px;
 }
+
 .fa-times-circle {
   font-size: 25px;
 }
