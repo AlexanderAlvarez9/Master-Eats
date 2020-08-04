@@ -1,4 +1,4 @@
-@import './Variables';
+@import '../../assets/styles/components/Variables.scss';
 
 @mixin btn {
   background-color: $buttons-color;
@@ -12,6 +12,7 @@
   border: 1px solid $secondary-light-color;
   box-shadow: 1px 1px 1px 1px #00000029;
 }
+
 .content {
   display: grid;
   grid-gap: 30px;
@@ -21,6 +22,7 @@
     &__list {
       width: 80%;
       margin: 10px auto 50px;
+
       &--title {
         display: grid;
         grid-template-columns: repeat(6, 1fr);
@@ -30,13 +32,16 @@
         span:nth-of-type(1) {
           grid-column: 3 / span 1;
         }
+
         span:nth-of-type(2) {
           grid-column: 4 / span 1;
         }
+
         span:nth-of-type(3) {
           grid-column: 5s / span 1;
         }
       }
+
       .item {
         background-color: $light-color;
         display: grid;
@@ -47,9 +52,11 @@
         grid-column: 1 / span 6;
         margin: 5px 0 20px 0;
         border-radius: 10px;
+
         span {
           font-weight: bold;
         }
+
         &__cantidad {
           display: flex;
           width: 100%;
@@ -61,30 +68,37 @@
     &__cards {
       width: 80%;
       margin: 10px auto;
+
       &--title {
         display: flex;
+
         h1 {
           margin: 0 0 10px 5px;
         }
+
         span {
           svg {
             font-size: 25px;
           }
         }
       }
+
       &--container {
         display: grid;
         grid-template-columns: repeat(4, 25%);
         grid-gap: 10px;
       }
+
       .card {
         background-color: $light-color;
         @include border();
         border-radius: 10px;
         padding: 5px;
+
         p {
           margin: 0;
         }
+
         button {
           display: block;
           width: 90%;

@@ -1,9 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types'
-import '../assets/styles/components/Card.scss'
+import './Card.scss'
 
 const Card = ({ title, price, image, categorie }) => {
-  // const image = '/src/assets/img/cerveza.png';
 
   return (
     <div className="card">

@@ -3,7 +3,7 @@
 /* eslint-disable jsx-quotes */
 import React, { useState } from 'react';
 
-import CartItem from './CartItem';
+import CartItem from '../CartItem/CartItem';
 
 const CartList = ({ state }) => {
   const [products, setProduct] = useState(state);

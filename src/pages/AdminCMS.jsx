@@ -1,7 +1,7 @@
 import React from 'react';
-import '../assets/styles/components/AdminAccount.scss';
+import '../components/Admin/AdminAccount.scss';
 import { BrowserRouter, Route, Link } from 'react-router-dom';
-import AdminProducts from '../components/AdminProducts'
+import AdminProducts from '../components/Admin/AdminProducts'
 
 const AdminCMS = () => {
   return (

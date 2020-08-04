@@ -1,8 +1,7 @@
 import React from 'react';
-import '../assets/styles/components/Footer.scss';
+import './Footer.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebook, faInstagram, faTwitter, faWhatsapp, faYoutube, faGithub } from "@fortawesome/free-brands-svg-icons"
-import { Link } from 'react-router-dom';
+import { faFacebook, faInstagram, faTwitter, faWhatsapp, faYoutube, faGithub } from "@fortawesome/free-brands-svg-icons";
 
 const Facebook = 'https://www.Facebook.com/';
 const Instagram = 'https://www.Instagram.com/';

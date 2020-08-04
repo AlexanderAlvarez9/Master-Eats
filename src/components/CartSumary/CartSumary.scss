@@ -1,19 +1,21 @@
-@import './CartProducts';
+@import '../CartProducts/CartProducts';
 
 .sumary {
   background-color: $light-color;
   @include border();
-  width: 60%;
   max-height: 280px;
   margin-top: 23px;
   border-radius: 10px;
   padding: 15px 30px 10px 30px;
+
   span {
     font-size: 15px;
   }
+
   svg {
     font-size: 25px;
   }
+
   .fa-edit {
     text-align: end;
   }
@@ -27,30 +29,38 @@
   &__location {
     display: grid;
     grid-template-columns: 10% 80% 10%;
+
     span {
       display: block;
     }
+
     &--location {
       margin-left: 10px;
     }
   }
+
   &__pay {
     display: grid;
     grid-template-columns: 10% 80% 10%;
+
     span {
       display: block;
     }
+
     &--pay {
       margin-left: 10px;
     }
+
     &--title {
       display: flex;
       justify-content: flex-end;
+
       h1 {
         color: $accent-color;
       }
     }
   }
+
   button {
     width: 90%;
     margin: 15px 5%;

@@ -2,8 +2,6 @@ import React from 'react';
 
 class CategoriesMenu extends React.Component {
 
-  // state = {};
-
   filterCategory() {
     alert(`Filtrar ${this.props.categorie}`)
   }

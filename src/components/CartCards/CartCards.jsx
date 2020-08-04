@@ -4,7 +4,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBeer } from '@fortawesome/free-solid-svg-icons';
-import cerveza from '../assets/img/cerveza.png';
+import cerveza from '../../assets/img/cerveza.png';
 
 const CartCards = () => (
   <section className="products__cards">

@@ -7,7 +7,7 @@ import {
   faCreditCard,
   faEdit,
 } from '@fortawesome/free-solid-svg-icons';
-import '../assets/styles/components/CartSumary.scss';
+import './CartSumary.scss';
 
 const Sumary = () => (
   <section className='sumary'>

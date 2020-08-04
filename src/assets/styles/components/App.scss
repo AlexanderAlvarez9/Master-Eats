@@ -39,8 +39,11 @@ a:visited {
 a:hover {
   color: var(--link);
 }
-
 a:active {
+  color: var(--link);
+}
+
+a:link {
   color: var(--link);
 }
 

@@ -2,8 +2,8 @@ import React from 'react';
 import '../assets/styles/components/Globales.scss';
 
 import '../assets/styles/components/CartIcon.scss';
-import CartProducts from '../components/CartProducts';
-import CartSumary from '../components/CartSumary';
+import CartProducts from '../components/CartProducts/CartProducts';
+import CartSumary from '../components/CartSumary/CartSumary';
 // import Container from '../containers/Containers';
 
 const Cart = ({ state }) => (
