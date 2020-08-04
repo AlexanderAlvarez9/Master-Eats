@@ -1,10 +1,10 @@
 import React from 'react';
-import '../assets/styles/components/UserAccount.scss';
+import '../components/UserAccount/UserAccount.scss';
 import { Link, BrowserRouter, Route } from 'react-router-dom';
-import UserAccountDetails from '../components/UserAccountDetails';
-import UserAccountOrders from '../components/UserAccountOrders';
-import UserAccountAdress from '../components/UserAccountAdress';
-import UserAccountPayment from '../components/UserAccountPayment';
+import UserAccountDetails from '../components/UserAccount/UserAccountDetails';
+import UserAccountOrders from '../components/UserAccount/UserAccountOrders';
+import UserAccountAdress from '../components/UserAccount/UserAccountAdress';
+import UserAccountPayment from '../components/UserAccount/UserAccountPayment';
 
 const UserAccount = () => (
   <BrowserRouter>

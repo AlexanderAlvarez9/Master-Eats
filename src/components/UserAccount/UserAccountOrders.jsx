@@ -1,5 +1,5 @@
 import React from 'react';
-import '../assets/styles/components/UserAccount.scss';
+import './UserAccount.scss';
 
 const UserAccountOrders = () => {
   return (

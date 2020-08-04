@@ -1,16 +1,16 @@
 import React from 'react';
-import '../assets/styles/components/Header.scss'
-import CategoriesMenu from './CategoriesMenu';
+import './Header.scss'
+import CategoriesMenu from '../Categories/CategoriesMenu';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingBag, faSearch, faUser, faCog, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 
-import meat from '../assets/img/categories/meat.png'
-import canned from '../assets/img/categories/canned.png'
-import milk from '../assets/img/categories/milk.png'
-import beer from '../assets/img/categories/beer.png'
-import snack from '../assets/img/categories/snack.png'
-import vegetables from '../assets/img/categories/vegetables.png'
+import meat from '../../assets/img/categories/meat.png'
+import canned from '../../assets/img/categories/canned.png'
+import milk from '../../assets/img/categories/milk.png'
+import beer from '../../assets/img/categories/beer.png'
+import snack from '../../assets/img/categories/snack.png'
+import vegetables from '../../assets/img/categories/vegetables.png'
 
 const Header = () => {
   const initalState = {

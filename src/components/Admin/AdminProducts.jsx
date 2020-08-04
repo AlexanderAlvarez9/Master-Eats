@@ -1,5 +1,5 @@
 import React from 'react';
-import '../assets/styles/components/AdminAccount.scss';
+import './AdminAccount.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEdit } from '@fortawesome/free-solid-svg-icons';
 
