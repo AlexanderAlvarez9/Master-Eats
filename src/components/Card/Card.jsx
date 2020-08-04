@@ -2,13 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types'
 import './Card.scss'
 
-const Card = ({ title, price, image, categorie }) => {
+const Card = ({ name, price, originpath, category }) => {
 
   return (
     <div className="card">
-      <img className="card--img" src={image} width="135" alt={title} />
+      <img className="card--img" src={originpath} width="135" alt={name} />
       <div className="card--text">
-        <p className="card--text__title">{title}</p>
+        <p className="card--text__name">{name}</p>
         <span className="card--text__price">${price}</span>
       </div>
       <button className="card--button">Agregar</button>
@@ -17,10 +17,10 @@ const Card = ({ title, price, image, categorie }) => {
 };
 
 Card.propTypes = {
-  image: PropTypes.string,
-  title: PropTypes.string,
+  originpath: PropTypes.string,
+  name: PropTypes.string,
   price: PropTypes.number,
-  categorie: PropTypes.string
+  category: PropTypes.string
 }
 
 export default Card;

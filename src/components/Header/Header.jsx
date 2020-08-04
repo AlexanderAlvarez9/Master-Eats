@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './Header.scss'
 import CategoriesMenu from '../Categories/CategoriesMenu';
 import { Link } from 'react-router-dom';
@@ -11,6 +11,8 @@ import milk from '../../assets/img/categories/milk.png'
 import beer from '../../assets/img/categories/beer.png'
 import snack from '../../assets/img/categories/snack.png'
 import vegetables from '../../assets/img/categories/vegetables.png'
+import { ProductContexts } from '../../utils/ProductContexts';
+
 
 const Header = () => {
   const initalState = {
@@ -48,6 +50,8 @@ const Header = () => {
     ]
   };
 
+  const { products } = useContext(ProductContexts);
+  console.log(products);
   return (
     <React.Fragment>
       <div className="Header">
@@ -68,6 +72,7 @@ const Header = () => {
             </Link>
             <Link className="icon" to="/cart">
               <FontAwesomeIcon className="faShoppingCart" icon={faShoppingCart} />
+              {products != undefined && products.length}
             </Link>
             <Link className="icon" to="/admin">
               <FontAwesomeIcon className="faCog" icon={faCog} />
