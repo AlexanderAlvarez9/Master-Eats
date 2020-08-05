@@ -1,9 +1,8 @@
 import React from 'react';
-import SignIn from '../components/SignIn';
-import SignUp from '../components/SignUp';
+import SignIn from '../components/Sign/SignIn';
+import SignUp from '../components/Sign/SignUp';
 
-import '../assets/styles/components/Form.scss';
-
+import '../components/Sign/Form.scss';
 class Form extends React.Component {
   MoveForm() {
     let container = document.querySelector('.container');

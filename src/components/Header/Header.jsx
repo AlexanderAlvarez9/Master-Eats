@@ -51,9 +51,8 @@ const Header = () => {
   };
 
   const { products } = useContext(ProductContexts);
-  console.log(products);
   return (
-    <React.Fragment>
+    <>
       <div className="Header">
         <section className="Header__brand">
           <div className="Header__brand--logo">
@@ -88,7 +87,7 @@ const Header = () => {
 
         </section>
       </div>
-    </React.Fragment>
+    </>
   )
 }
 export default Header;
