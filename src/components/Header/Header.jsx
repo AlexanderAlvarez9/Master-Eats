@@ -50,6 +50,7 @@ const Header = () => {
     ]
   };
 
+  const { cart } = useContext(ProductContexts);
   const { products } = useContext(ProductContexts);
   return (
     <>
@@ -71,7 +72,7 @@ const Header = () => {
             </Link>
             <Link className="icon" to="/cart">
               <FontAwesomeIcon className="faShoppingCart" icon={faShoppingCart} />
-              {products != undefined && products.length}
+              {products != undefined && cart.length}
             </Link>
             <Link className="icon" to="/admin">
               <FontAwesomeIcon className="faCog" icon={faCog} />

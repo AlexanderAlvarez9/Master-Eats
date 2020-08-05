@@ -12,6 +12,7 @@ import NotFound from '../pages/NotFound';
 import Form from '../pages/Form';
 import ProductsProvider from '../utils/ProductContexts';
 import Home from '../pages/Home';
+import Cart from '../components/Cart/Cart';
 
 function App() {
 
@@ -20,18 +21,15 @@ function App() {
       <BrowserRouter>
         <Layout>
           <Containers>
-
             <Switch>
               <Route exact path='/' component={Home} />
               <Route exact path='/success' component={Success} />
               <Route exact path='/notFound' component={NotFound} />
-              <Route exact path='/cart'>
-                {/* {initialState.length > 0 && <CartMain state={initialState} />} */}
-              </Route>
-              <Route exact path='/sign' component={Form} />
+              <Route exact path='/cart' component={Cart} />
               <Route exact path='/account' component={UserAccount} />
+              <Route exact path='/sign' component={Form} />
               <Route exact path='/admin' component={AdminCMS} />
-              <Route component={NotFound} />
+              <Route component={Home} />
             </Switch>
 
             <ul>

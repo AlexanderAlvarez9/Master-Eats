@@ -6,20 +6,14 @@ import Card from '../components/Card/Card';
 
 const Home = () => {
 
-  const { products } = useContext(ProductContexts);
+  // const { products } = useContext(ProductContexts);
   return (
     <div className="Home">
-      <Categories title='Categoria Dinamica'>
+      <Categories title='Carnes'>
         <ProductsContainer>
-          {products !== undefined ?
-            (products.map((item) => (
-              <Card key={item._id} {...item} />
-            ))) : <h1>SIn productos</h1>
-          }
+          <Card />
         </ProductsContainer>
       </Categories>
-
-
     </div>
   );
 };

@@ -1,12 +1,11 @@
-/* eslint-disable import/no-extraneous-dependencies */
-/* eslint-disable jsx-a11y/anchor-is-valid */
-/* eslint-disable jsx-quotes */
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 
 import CartItem from '../CartItem/CartItem';
+import { ProductContexts } from '../../utils/ProductContexts';
 
-const CartList = ({ state }) => {
-  const [products, setProduct] = useState(state);
+const CartList = ({ }) => {
+  const { cart } = useContext(ProductContexts);
+  const products = cart;
 
   const handleDelete = (id) => {
     products.forEach((product, i) => {
@@ -25,7 +24,7 @@ const CartList = ({ state }) => {
         <span>Total</span>
       </div>
       {products.map((item) => (
-        <CartItem item={item} key={item.id} handleDelete={handleDelete} />
+        <CartItem item={item} key={item._id} handleDelete={handleDelete} />
       ))}
     </section>
   );
