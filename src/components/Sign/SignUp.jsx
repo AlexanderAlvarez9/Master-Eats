@@ -1,5 +1,5 @@
 import React from 'react';
-import SignUpImage from '../assets/static/img-3.jpg';
+import SignInImage from '../../assets/static/img-3.jpg';
 
 const SignUp = (props) => {
   return (
