@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import PropTypes from 'prop-types'
-import './Card.scss'
+import './Card.scss';
 import { ProductContexts } from '../../utils/ProductContexts';
 
 const Card = ({ }) => {
@@ -29,7 +29,7 @@ const Card = ({ }) => {
               <button className="card--button" onClick={() => handleAdd(item._id)}>Agregar</button>
             </div>
           )))
-          : <h1>SIn productos</h1>
+          : <h1>Sin productos</h1>
       }
     </>
   )
