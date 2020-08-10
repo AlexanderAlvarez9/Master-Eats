@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React from 'react';
 import '../assets/styles/components/App.scss';
 import '../assets/styles/components/Globales.scss';
 
@@ -12,10 +12,9 @@ import NotFound from '../pages/NotFound';
 import Form from '../pages/Form';
 import ProductsProvider from '../utils/ProductContexts';
 import Home from '../pages/Home';
-import Cart from '../components/Cart/Cart';
+import Cart from '../pages/Cart/Cart';
 
 function App() {
-
   return (
     <ProductsProvider>
       <BrowserRouter>
@@ -43,9 +42,7 @@ function App() {
                 <Link to='/notFound'>NotFound</Link>
               </li>
             </ul>
-
           </Containers>
-
         </Layout>
       </BrowserRouter>
     </ProductsProvider>

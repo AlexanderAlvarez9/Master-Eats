@@ -1,42 +1,72 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faPlusCircle,
   faMinusCircle,
   faTimesCircle,
 } from '@fortawesome/free-solid-svg-icons';
+import {
+  ProductContexts,
+  getProduct,
+  getProductSubtotal,
+} from '../../utils/ProductContexts';
 
-const CartItem = ({ item, handleDelete }) => {
-  const [cantidad, setCantidad] = useState(1);
+const CartItem = ({ productId }) => {
+  const {
+    products,
+    quantityById,
+    increaseInCart,
+    decreaseInCart,
+    deleteFromCart,
+  } = useContext(ProductContexts);
+  const { originpath, name, price } = getProduct(products, productId);
 
-  const handlePlus = (e) => {
-    e.preventDefault();
-    setCantidad(cantidad + 1);
-  };
+  function handleMinus(event) {
+    event.preventDefault();
+    decreaseInCart(productId);
+    if (quantityById[productId] === 0) {
+      deleteFromCart(productId);
+    }
+  }
 
-  const handleMinus = (e) => {
-    e.preventDefault();
-    setCantidad(cantidad - 1);
-  };
+  function handlePlus(event) {
+    event.preventDefault();
+    increaseInCart(productId);
+  }
+
+  function handleDelete(event) {
+    event.preventDefault();
+    deleteFromCart(productId);
+  }
+
+  if (quantityById[productId] === 0) {
+    return null;
+  }
 
   return (
-    <div className='item' key={item.id}>
-      <img src={item.originpath} width='80' height='80' alt={item.name} />
-      <p>{item.name}</p>
+    <div className='item'>
+      <img src={originpath} width='80' height='80' alt={name} />
+      <p>{name}</p>
       <div className='item__cantidad'>
-        <a rel='stylesheet' href='#' onClick={handleMinus}>
+        <button
+          type='button'
+          disabled={quantityById[productId] === 1}
+          onClick={handleMinus}
+        >
           <FontAwesomeIcon icon={faMinusCircle} />
-        </a>
-        <span>{cantidad}</span>
-        <a rel='stylesheet' href='#' onClick={handlePlus}>
+        </button>
+        <span>{quantityById[productId]}</span>
+        <button onClick={handlePlus}>
           <FontAwesomeIcon icon={faPlusCircle} />
-        </a>
+        </button>
       </div>
-      <p>${item.price}</p>
-      <p>${item.price * cantidad}</p>
-      <a rel='stylesheet' href='#' onClick={() => handleDelete(item.id)}>
+      <p>${price}</p>
+      <p className='item__total'>
+        ${getProductSubtotal(products, quantityById, productId)}
+      </p>
+      <button onClick={handleDelete}>
         <FontAwesomeIcon icon={faTimesCircle} />
-      </a>
+      </button>
     </div>
   );
 };

@@ -4,13 +4,11 @@ import CartList from '../CartList/CartList';
 import CartCards from '../CartCards/CartCards';
 import './CartProducts.scss';
 
-const Products = ({ state }) => (
-  <div>
-    <section className='products'>
-      <CartList state={state} />
-      <CartCards />
-    </section>
-  </div>
+const Products = () => (
+  <section className='products'>
+    <CartList />
+    <CartCards />
+  </section>
 );
 
 export default Products;
