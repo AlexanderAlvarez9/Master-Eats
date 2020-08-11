@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
-import './Carrousel.scss'
-
+import './Carrousel.scss';
 
 const Carrousel = () => {
 
@@ -103,7 +102,7 @@ const Carrousel = () => {
     <div className="carrousel">
       <section className="home">
         <div className="slider">
-          <div className="slide active" style="background-image: url('../src/carrusel/img/1.jpg')">
+          <div className="slide active" style="background-image: url('../../assets/img/Carrousel/1.jpg')">
             <div className="container">
               <div className="caption">
                 <h1>Image collection 1</h1>
@@ -112,7 +111,7 @@ const Carrousel = () => {
               </div>
             </div>
           </div>
-          <div className="slide" style="background-image: url('../src/carrusel/img/2.jpg')">
+          <div className="slide" style="background-image: url('../../assets/img/Carrousel/2.jpg')">
             <div className="container">
               <div className="caption">
                 <h1>Image collection 2</h1>
@@ -121,7 +120,7 @@ const Carrousel = () => {
               </div>
             </div>
           </div>
-          <div className="slide" style="background-image: url('../src/carrusel/img/1.jpg')">
+          <div className="slide" style="background-image: url('../../assets/img/Carrousel/1.jpg')">
             <div className="container">
               <div className="caption">
                 <h1>Image collection 5</h1>
@@ -130,7 +129,7 @@ const Carrousel = () => {
               </div>
             </div>
           </div>
-          <div className="slide" style="background-image: url('../src/carrusel/img/3.jpg')">
+          <div className="slide" style="background-image: url('../../assets/img/Carrousel/3.jpg')">
             <div className="container">
               <div className="caption">
                 <h1>Image collection 3</h1>
@@ -139,7 +138,7 @@ const Carrousel = () => {
               </div>
             </div>
           </div>
-          <div className="slide" style="background-image: url('../src/carrusel/img/4.jpg')">
+          <div className="slide" style="background-image: url('../../assets/img/Carrousel/4.jpg')">
             <div className="container">
               <div className="caption">
                 <h1>Image collection 4</h1>
@@ -149,12 +148,10 @@ const Carrousel = () => {
             </div>
           </div>
         </div>
-        {/* controls */}
         <div className="controls">
           <div className="prev">&lt;</div>
           <div className="next">&gt;</div>
         </div>
-        {/* indicators */}
         <div className="indicator">
         </div>
       </section>
