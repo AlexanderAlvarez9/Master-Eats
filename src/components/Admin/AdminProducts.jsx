@@ -2,7 +2,24 @@ import React, { useContext } from 'react';
 import './AdminAccount.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEdit } from '@fortawesome/free-solid-svg-icons';
-import { ProductContexts } from '../../utils/ProductContexts';
+import { ProductContexts, getProduct } from '../../utils/ProductContexts';
+
+const AdminProductsItem = ({ productId }) => {
+  const { products } = useContext(ProductContexts);
+  const { originpath, name, price, category, cantidad } = getProduct(products, productId);
+
+  return (
+    <tr key={productId}>
+      <td className="image-table"><img className="card--img" src={originpath} width="135" alt={name} /></td>
+      <td>{name}</td>
+      <td>${price}</td>
+      <td>{cantidad}</td>
+      <td className="category-table">{category}</td>
+      <td><i className="card--button" onClick={() => handleAdd(productId)}><FontAwesomeIcon className="faEdit actions" icon={faEdit} title="Edit" /></i></td>
+    </tr>
+  )
+}
+
 
 const AdminProducts = () => {
   const { products } = useContext(ProductContexts);
@@ -30,15 +47,8 @@ const AdminProducts = () => {
 
           {
             products !== undefined
-              ? (products.map((item) => (
-                <tr key={item._id}>
-                  <td className="image-table"><img className="card--img" src={item.originpath} width="135" alt={item.name} /></td>
-                  <td>{item.name}</td>
-                  <td>${item.price}</td>
-                  <td>{item.cantidad}</td>
-                  <td className="category-table">{item.category}</td>
-                  <td><i className="card--button" onClick={() => handleAdd(item._id)}><FontAwesomeIcon className="faEdit actions" icon={faEdit} title="Edit" /></i></td>
-                </tr>
+              ? (Object.keys(products).map((productId) => (
+                <AdminProductsItem productId={productId} key={productId} />
               )))
               : <h1>Sin productos</h1>
           }

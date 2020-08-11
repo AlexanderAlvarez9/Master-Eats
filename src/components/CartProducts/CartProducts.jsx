@@ -1,16 +1,19 @@
 /* eslint-disable jsx-quotes */
-import React from 'react';
+import React, { useContext } from 'react';
 import CartList from '../CartList/CartList';
 import CartCards from '../CartCards/CartCards';
 import './CartProducts.scss';
+import { ProductContexts } from '../../utils/ProductContexts';
 
-const Products = ({ state }) => (
-  <div>
+
+const Products = () => {
+
+  return (
     <section className='products'>
-      <CartList state={state} />
+      <CartList />
       <CartCards />
     </section>
-  </div>
-);
+  )
+};
 
 export default Products;

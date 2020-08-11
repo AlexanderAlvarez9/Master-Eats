@@ -20,7 +20,6 @@
 
   .products {
     &__list {
-      width: 80%;
       margin: 10px auto 50px;
 
       &--title {
@@ -57,6 +56,16 @@
           font-weight: bold;
         }
 
+        button {
+          background-color: rgba(0, 0, 0, 0);
+          border: none;
+          cursor: pointer;
+          &:disabled .fa-minus-circle {
+            color: rgb(167, 167, 167);
+            cursor: not-allowed;
+          }
+        }
+
         &__cantidad {
           display: flex;
           width: 100%;
@@ -66,7 +75,6 @@
     }
 
     &__cards {
-      width: 80%;
       margin: 10px auto;
 
       &--title {
@@ -85,7 +93,7 @@
 
       &--container {
         display: grid;
-        grid-template-columns: repeat(4, 25%);
+        grid-template-columns: repeat(4, 1fr);
         grid-gap: 10px;
       }
 
@@ -94,6 +102,10 @@
         @include border();
         border-radius: 10px;
         padding: 5px;
+        min-width: 130px;
+
+        &__img {
+        }
 
         p {
           margin: 0;
@@ -106,6 +118,23 @@
           @include btn();
         }
       }
+    }
+  }
+}
+
+@media (max-width: 1320px) {
+  .products__cards {
+    &--container {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .content {
+    grid-template-columns: 1fr;
+    .products__cards {
+      display: none;
     }
   }
 }

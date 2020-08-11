@@ -1,20 +1,10 @@
-import React, { useState, useContext } from 'react';
+import React, { useContext } from 'react';
 
 import CartItem from '../CartItem/CartItem';
 import { ProductContexts } from '../../utils/ProductContexts';
 
-const CartList = ({ }) => {
+const CartList = () => {
   const { cart } = useContext(ProductContexts);
-  const products = cart;
-
-  const handleDelete = (id) => {
-    products.forEach((product, i) => {
-      if (product.id === id) {
-        products.splice(i, 1);
-      }
-    });
-    setProduct([...products]);
-  };
 
   return (
     <section className='products__list'>
@@ -23,8 +13,8 @@ const CartList = ({ }) => {
         <span>Costo</span>
         <span>Total</span>
       </div>
-      {products.map((item) => (
-        <CartItem item={item} key={item._id} handleDelete={handleDelete} />
+      {cart.map((productId) => (
+        <CartItem productId={productId} key={productId} />
       ))}
     </section>
   );
