@@ -1,55 +1,37 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import '../assets/styles/components/App.scss';
 import '../assets/styles/components/Globales.scss';
 
 import { Link, BrowserRouter, Route, Switch } from 'react-router-dom';
 import Containers from '../containers/Containers';
 import Layout from '../components/Layout';
-import Categories from '../components/Categories';
-import ProductsContainer from '../components/ProductsContainer';
-import Card from '../components/Card';
 import Success from '../pages/Success';
 import UserAccount from '../pages/UserAccount';
+import AdminCMS from '../pages/AdminCMS';
 import NotFound from '../pages/NotFound';
-import CartMain from '../pages/Cart';
 import Form from '../pages/Form';
-import useInitialState from '../hooks/useInitialState';
-
-const API = 'https://my.api.mockaroo.com/mastereats.json?key=65f14490';
+import ProductsProvider from '../utils/ProductContexts';
+import Home from '../pages/Home';
+import Cart from '../components/Cart/Cart';
+import Carrousel from '../components/Carousel/Carrousel';
 
 function App() {
-  const initialState = useInitialState(API);
 
   return (
-    <>
+    <ProductsProvider>
       <BrowserRouter>
         <Layout>
           <Containers>
-
             <Switch>
-              <Route
-                exact
-                path='/'
-                render={() =>
-                  initialState.length > 0 && (
-                    <Categories title='Categoria Dinamica'>
-                      <ProductsContainer>
-                        {initialState.map((item) => (
-                          <Card key={item.id} {...item} />
-                        ))}
-                      </ProductsContainer>
-                    </Categories>
-                  )
-                }
-              />
+              <Route exact path='/' component={Home} />
               <Route exact path='/success' component={Success} />
               <Route exact path='/notFound' component={NotFound} />
-              <Route exact path='/cart'>
-                {initialState.length > 0 && <CartMain state={initialState} />}
-              </Route>
-              <Route exact path='/sign' component={Form} />
+              <Route exact path='/cart' component={Cart} />
               <Route exact path='/account' component={UserAccount} />
-              <Route component={NotFound} />
+              <Route exact path='/sign' component={Form} />
+              <Route exact path='/admin' component={AdminCMS} />
+              <Route exact path='/carrousel' component={Carrousel} />
+              <Route component={Home} />
             </Switch>
 
             <ul>
@@ -62,13 +44,16 @@ function App() {
               <li>
                 <Link to='/notFound'>NotFound</Link>
               </li>
+              <li>
+                <Link to='/carrousel'>.</Link>
+              </li>
             </ul>
 
           </Containers>
 
         </Layout>
       </BrowserRouter>
-    </>
+    </ProductsProvider>
   );
 }
 

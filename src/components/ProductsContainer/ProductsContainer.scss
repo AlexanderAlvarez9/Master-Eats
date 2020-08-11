@@ -1,0 +1,39 @@
+.products__cards--container {
+  color: #4c5454;
+  font-family: "Lato",
+    sans-serif;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 10px;
+  margin-top: 2em;
+}
+
+@media screen and (max-width: 4000px) {
+  .products__cards--container {
+    grid-template-columns: repeat(8, 1fr);
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .products__cards--container {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .products__cards--container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (max-width: 880px) {
+  .products__cards--container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .products__cards--container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

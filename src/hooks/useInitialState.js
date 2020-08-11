@@ -1,11 +1,7 @@
 import { useState, useEffect } from 'react';
 
 const useInitialState = (API) => {
-  const [data, setData] = useState({
-    // mylist: [],
-    // trends: [],
-    // originals: []
-  })
+  const [data, setData] = useState({})
   useEffect(() => {
     fetch(API)
       .then(response => response.json())
