@@ -9,7 +9,7 @@ const Home = () => {
   // const { products } = useContext(ProductContexts);
   return (
     <div className="Home">
-      <Categories title='Carnes'>
+      <Categories title='Todos Los Productos'>
         <ProductsContainer>
           <Card />
         </ProductsContainer>
