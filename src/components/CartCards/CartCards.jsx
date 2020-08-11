@@ -1,56 +1,52 @@
-/* eslint-disable react/button-has-type */
-/* eslint-disable import/no-extraneous-dependencies */
-/* eslint-disable jsx-quotes */
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBeer } from '@fortawesome/free-solid-svg-icons';
-import cerveza from '../../assets/img/cerveza.png';
+import { ProductContexts, getProduct } from '../../utils/ProductContexts';
 
-const CartCards = () => (
-  <section className='products__cards'>
-    <div className='products__cards--title'>
+const CartCardsItem = ({ productId }) => {
+  const { products } = useContext(ProductContexts);
+  const { originpath, name, price } = getProduct(products, productId);
+
+  return (
+    <div className="card" key={productId}>
+      <img src={originpath} width="100" alt="foto" />
+      <p>{name}</p>
       <span>
-        <FontAwesomeIcon icon={faBeer} />
+        <b>${price}</b>
       </span>
-      <h1>Olvidaste algo?</h1>
+      <button>Agregar</button>
     </div>
-    <div className='products__cards--container'>
-      {/* <div className='card'>
-        <div className='card__img'>
-          <img src={cerveza} width='135' alt='foto' />
-        </div>
-        <p>Cerveza Corona</p>
+  )
+}
+
+const CartCards = () => {
+  const { products } = useContext(ProductContexts);
+
+  const random = Math.floor(Math.random() * products.length);
+  const random2 = random + 4;
+
+
+  return (
+    <section className="products__cards" >
+      {/* <div className="products__cards--title">
         <span>
-          <b>$78.00</b>
+          <FontAwesomeIcon icon={faBeer} />
         </span>
-        <button>Agregar</button>
+        <h1>Olvidaste algo?</h1>
+      </div>
+      <div className="products__cards--container" >
+
+        {
+          products !== undefined ? (
+            Object.keys(products).map(productId => (
+              <CartCardsItem key={productId} productId={productId} />
+            ))
+          )
+            : <h1>Sin productos</h1>
+        }
       </div> */}
-      <div className='card'>
-        <img src={cerveza} width='135' alt='foto' />
-        <p>Cerveza Corona</p>
-        <span>
-          <b>$78.00</b>
-        </span>
-        <button>Agregar</button>
-      </div>
-      <div className='card'>
-        <img src={cerveza} width='135' alt='foto' />
-        <p>Cerveza Corona</p>
-        <span>
-          <b>$78.00</b>
-        </span>
-        <button>Agregar</button>
-      </div>
-      <div className='card'>
-        <img src={cerveza} width='135' alt='foto' />
-        <p>Cerveza Corona</p>
-        <span>
-          <b>$78.00</b>
-        </span>
-        <button>Agregar</button>
-      </div>
-    </div>
-  </section>
-);
+    </section>
+  )
+};
 
 export default CartCards;

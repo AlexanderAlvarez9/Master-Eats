@@ -32,7 +32,7 @@ const Sumary = () => {
           <span>
             <b>Direccion de entrega</b>
           </span>
-          <span>Calle de mi casa #2569</span>
+          <span>Calle falsa #123</span>
         </div>
         <FontAwesomeIcon icon={faEdit} />
       </div>

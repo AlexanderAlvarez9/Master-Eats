@@ -41,5 +41,4 @@ const ProductsProvider = ({ children }) => {
 export default ProductsProvider;
 
 export const getProduct = (products, id) => products[id];
-export const getProductSubtotal = (products, qtyById, id) =>
-  (products[id].price * qtyById[id]).toFixed(2);
+export const getProductSubtotal = (products, qtyById, id) => (products[id].price * qtyById[id]).toFixed(2);

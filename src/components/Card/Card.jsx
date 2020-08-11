@@ -26,12 +26,12 @@ const Card = () => {
   return (
     <>
       {products !== undefined ? (
-        Object.keys(products).map((productId) => (
+        Object.keys(products).map(productId => (
           <CardItem key={productId} productId={productId} />
         ))
       ) : (
-        <h1>Sin productos</h1>
-      )}
+          <h1>Sin productos</h1>
+        )}
     </>
   );
 };

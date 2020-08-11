@@ -76,8 +76,6 @@
   }
 }
 
-
-
 @media screen and (max-width: 1024px) {
   .Header {
     grid-template-columns: repeat(4, 1fr);
@@ -94,6 +92,29 @@
     &__categories {
       img {
         display: none;
+      }
+    }
+
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .Header {
+
+    &__title {
+      display: none;
+    }
+
+    &__categories {
+      display: grid;
+
+      img {
+        display: none;
+      }
+
+      .categorie {
+        padding: 0;
+        height: initial;
       }
     }
 
