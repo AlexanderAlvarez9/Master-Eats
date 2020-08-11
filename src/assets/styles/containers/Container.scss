@@ -14,3 +14,10 @@
     color: var(--active);
   }
 }
+
+@media screen and (max-width: 600px) {
+  .containerMain {
+    margin: 1.5em auto;
+    width: 90%;
+  }
+}
