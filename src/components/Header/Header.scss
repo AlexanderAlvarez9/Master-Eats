@@ -99,3 +99,26 @@
 
   }
 }
+
+@media screen and (max-width: 600px) {
+  .Header {
+
+    &__title {
+      display: none;
+    }
+
+    &__categories {
+      display: grid;
+
+      img {
+        display: none;
+      }
+
+      .categorie {
+        padding: 0;
+        height: initial;
+      }
+    }
+
+  }
+}

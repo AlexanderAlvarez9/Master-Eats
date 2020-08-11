@@ -13,6 +13,7 @@ import Form from '../pages/Form';
 import ProductsProvider from '../utils/ProductContexts';
 import Home from '../pages/Home';
 import Cart from '../components/Cart/Cart';
+import Carrousel from '../components/Carousel/Carrousel';
 
 function App() {
 
@@ -29,6 +30,7 @@ function App() {
               <Route exact path='/account' component={UserAccount} />
               <Route exact path='/sign' component={Form} />
               <Route exact path='/admin' component={AdminCMS} />
+              <Route exact path='/carrousel' component={Carrousel} />
               <Route component={Home} />
             </Switch>
 
@@ -41,6 +43,9 @@ function App() {
               </li>
               <li>
                 <Link to='/notFound'>NotFound</Link>
+              </li>
+              <li>
+                <Link to='/carrousel'>.</Link>
               </li>
             </ul>
 

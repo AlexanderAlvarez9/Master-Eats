@@ -12,11 +12,10 @@ $hover-color: #E7305B;
 $text-color: #4C5454;
 
 .AdminAccount {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: auto;
+  display: grid;
+  grid-template-columns: 30% 1fr;
+  justify-items: center;
+  width: 100%;
 
   &__title {
     padding: 1em 0.5em;
@@ -133,7 +132,7 @@ $text-color: #4C5454;
     padding: 4em;
 
     &__menu {
-      width: 27em;
+      // width: 20em;
       background: $background-card;
       box-shadow: 0px 3px 6px #00000029;
       border-radius: $border-principal;
@@ -166,7 +165,7 @@ $text-color: #4C5454;
     margin-bottom: 4em;
     padding: 2em;
     position: relative;
-    width: 435px;
+    // width: 435px;
 
   }
 }
@@ -177,12 +176,27 @@ $text-color: #4C5454;
 
 /*----------------------------------------------MEDIA QUERIES----------------------------------------------*/
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1500px) {
   .AdminAccount {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-items: center;
-    width: 100%;
+    grid-template-columns: 420px 1100px;
+    gap: 80px;
+  }
+
+  .AdminAccount__container__menu-settings {
+    width: 1100px;
+
+    h2 {
+      padding-top: 40px;
+      padding-left: 45px;
+    }
+  }
+
+}
+
+@media screen and (min-width: 1000px) {
+  .AdminAccount {
+
 
     &__container {
       padding: 4em;
@@ -204,22 +218,15 @@ $text-color: #4C5454;
   }
 }
 
-@media screen and (min-width: 1500px) {
+@media screen and (max-width: 768px) {
   .AdminAccount {
-    display: grid;
-    grid-template-columns: 420px 1100px;
-    gap: 80px;
+    grid-template-columns: initial;
   }
 
-  .AdminAccount__container__menu-settings {
-    width: 1100px;
-
-    h2 {
-      padding-top: 40px;
-      padding-left: 45px;
-    }
+  .category-table,
+  .image-table {
+    display: none;
   }
-
 }
 
 /*---------------------------------------------- END MEDIA QUERIES----------------------------------------------*/
