@@ -3,6 +3,7 @@ import './AdminAccount.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEdit } from '@fortawesome/free-solid-svg-icons';
 import { ProductContexts, getProduct } from '../../utils/ProductContexts';
+import { Link } from 'react-router-dom';
 
 const AdminProductsItem = ({ productId }) => {
   const { products } = useContext(ProductContexts);
@@ -15,7 +16,11 @@ const AdminProductsItem = ({ productId }) => {
       <td>${price}</td>
       <td>{cantidad}</td>
       <td className="category-table">{category}</td>
-      <td><i className="card--button" onClick={() => handleAdd(productId)}><FontAwesomeIcon className="faEdit actions" icon={faEdit} title="Edit" /></i></td>
+      <td>
+
+        <Link to="/notFound"><i className="card--button" onClick={() => handleAdd(productId)}><FontAwesomeIcon className="faEdit actions" icon={faEdit} title="Edit" /></i></Link>
+
+      </td>
     </tr>
   )
 }

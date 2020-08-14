@@ -35,15 +35,6 @@ function App() {
 
             <ul>
               <li>
-                <Link to='/sign'>Login - Register</Link>
-              </li>
-              <li>
-                <Link to='/success'>Success</Link>
-              </li>
-              <li>
-                <Link to='/notFound'>NotFound</Link>
-              </li>
-              <li>
                 <Link to='/carrousel'>.</Link>
               </li>
             </ul>

@@ -1,5 +1,3 @@
-/* eslint-disable import/no-extraneous-dependencies */
-/* eslint-disable jsx-quotes */
 import React, { useContext } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -8,6 +6,7 @@ import {
   faEdit,
 } from '@fortawesome/free-solid-svg-icons';
 import './CartSumary.scss';
+import { Link } from 'react-router-dom';
 import { ProductContexts, getProduct } from '../../utils/ProductContexts';
 
 const Sumary = () => {
@@ -49,7 +48,8 @@ const Sumary = () => {
       <div className='sumary__pay--title'>
         <h1>Total: ${getTotal()}</h1>
       </div>
-      <button type='button'>Completar pedido</button>
+      <Link to="success"><button type='button'>Completar pedido</button></Link>
+      {/* <Link to="notFound"><button type='button'>Completar pedido</button></Link> */}
     </section>
   );
 };
