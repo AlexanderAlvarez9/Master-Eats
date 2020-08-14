@@ -1,20 +1,13 @@
 import React, { useState } from 'react';
 import SignUpImage from '../../assets/static/img-3.jpg';
 import { useFirebaseApp, useUser } from 'reactfire';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 
 const SignUp = (props) => {
 
+  let history = useHistory();
   const [values, setValues] = useState('')
-  const [profile, setProfile] = useState(0);
   const firebase = useFirebaseApp();
-  let user = useUser();
-
-
-  const userValues = {
-    email: '',
-    password: '',
-  };
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -27,6 +20,7 @@ const SignUp = (props) => {
 
   const handleSingUp = async () => {
     await firebase.auth().createUserWithEmailAndPassword(values.email, values.password)
+    history.push("/");
   }
 
   const handlelogout = async () => {
@@ -43,7 +37,6 @@ const SignUp = (props) => {
 
   const handleSubmit = e => {
     event.preventDefault();
-    props.history.push('/');
   }
 
   return (

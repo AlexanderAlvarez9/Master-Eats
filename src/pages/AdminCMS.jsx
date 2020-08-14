@@ -3,8 +3,17 @@ import '../components/Admin/AdminAccount.scss';
 import { BrowserRouter, Route, Link } from 'react-router-dom';
 import AdminProducts from '../components/Admin/AdminProducts'
 import NotFound from './NotFound';
+import { useFirebaseApp } from 'reactfire';
 
 const AdminCMS = () => {
+
+  const firebase = useFirebaseApp();
+
+  const handlelogout = async () => {
+    await firebase.auth().signOut()
+      .then(err => console.log(err))
+  }
+
   return (
     <BrowserRouter>
       <div className="AdminAccount">
@@ -13,7 +22,7 @@ const AdminCMS = () => {
             <h2 className="AdminAccount__title">Administracion</h2>
             <ul>
               <li><Link to="/adminProducts">Productos</Link></li>
-              <li><Link to="/">Cerrar sesion</Link></li>
+              <li><Link to="/" onClick={handlelogout}>Cerrar sesion</Link></li>
             </ul>
           </div>
         </div>
