@@ -1,7 +1,4 @@
 # Master Eats
-## About
-
-Platzi Master Group Project - Cohort 3 - Ana - JS Team
 
 ## Description
 
@@ -113,6 +110,10 @@ You can see the demo live [here](https://mastereatsplatzi.github.io/Master-Eats/
 ### Preview
 
 ![preview.png](preview.png)
+
+## About
+
+Platzi Master Group Project - Cohort 3 - Ana - JS Team
 
 ## License
 
