@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
 import SignInImage from '../../assets/static/img-1.jpg';
 import { useFirebaseApp, useUser } from 'reactfire';
+import { useHistory } from 'react-router-dom';
+
 
 const SignIn = (props) => {
 
+  let history = useHistory();
   const [values, setValues] = useState('')
   const [profile, setProfile] = useState(0);
   const firebase = useFirebaseApp();
@@ -40,6 +43,7 @@ const SignIn = (props) => {
   const handleSignIn = async () => {
     try {
       await firebase.auth().signInWithEmailAndPassword(values.email, values.password)
+      history.push("/");
     } catch (error) {
       alert(error.message)
     }

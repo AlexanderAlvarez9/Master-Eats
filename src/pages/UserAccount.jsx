@@ -5,33 +5,47 @@ import UserAccountDetails from '../components/UserAccount/UserAccountDetails';
 import UserAccountOrders from '../components/UserAccount/UserAccountOrders';
 import UserAccountAdress from '../components/UserAccount/UserAccountAdress';
 import UserAccountPayment from '../components/UserAccount/UserAccountPayment';
+import Success from './Success';
+import { useFirebaseApp } from 'reactfire';
 
-const UserAccount = () => (
-  <BrowserRouter>
-    <div className="UserAccount">
-      <div className="UserAccount__container">
-        <div className="UserAccount__container__menu">
-          <h2 className="UserAccount__title">Mi cuenta</h2>
-          <ul>
-            <li><Link to="/UserAccountDetails">Datos Generales</Link></li>
-            <li><Link to="/UserAccountAdress" >Direccion de Entrega</Link></li>
-            <li><Link to="/UserAccountOrders" >Mis Ordenes Recientes</Link></li>
-            <li><Link to="UserAccountPayment" >Metodos de Pago</Link></li>
-            <li><Link to="/">Cerrar sesion</Link></li>
-          </ul>
+const UserAccount = () => {
+
+
+  const firebase = useFirebaseApp();
+
+  const handlelogout = async () => {
+    await firebase.auth().signOut()
+      .then(err => console.log(err))
+  }
+
+  return (
+    <BrowserRouter>
+      <div className="UserAccount">
+        <div className="UserAccount__container">
+          <div className="UserAccount__container__menu">
+            <h2 className="UserAccount__title">Mi cuenta</h2>
+            <ul>
+              <li><Link to="/UserAccountDetails">Datos Generales</Link></li>
+              <li><Link to="/UserAccountAdress" >Direccion de Entrega</Link></li>
+              <li><Link to="/UserAccountOrders" >Mis Ordenes Recientes</Link></li>
+              <li><Link to="UserAccountPayment" >Metodos de Pago</Link></li>
+              <li><Link to="/" onClick={handlelogout}>Cerrar sesion</Link></li>
+            </ul>
+          </div>
+        </div>
+        <div className="UserAccount__containers">
+          <Route exact path="/UserAccountDetails" component={UserAccountDetails} />
+          <Route path="/UserAccountAdress" component={UserAccountAdress} />
+          <Route path="/UserAccountPayment" component={UserAccountPayment} />
+          <Route path="/UserAccountOrders" component={UserAccountOrders} />
+          <Route path="/success" component={Success} />
         </div>
       </div>
-      <div className="UserAccount__containers">
-        <Route exact path="/UserAccountDetails" component={UserAccountDetails} />
-        <Route path="/UserAccountAdress" component={UserAccountAdress} />
-        <Route path="/UserAccountPayment" component={UserAccountPayment} />
-        <Route path="/UserAccountOrders" component={UserAccountOrders} />
+      <div className="back-img">
+        <img src="./src/assets/img/my_location.svg" alt="BackImage" />
       </div>
-    </div>
-    <div className="back-img">
-      <img src="./src/assets/img/my_location.svg" alt="BackImage" />
-    </div>
-  </BrowserRouter>
-)
+    </BrowserRouter>
+  )
+}
 
 export default UserAccount;

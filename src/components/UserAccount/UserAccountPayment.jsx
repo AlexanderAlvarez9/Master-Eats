@@ -1,5 +1,6 @@
 import React from 'react';
 import './UserAccount.scss';
+import { Link } from 'react-router-dom';
 
 const UserAccountPayment = () => {
   return (
@@ -17,7 +18,7 @@ const UserAccountPayment = () => {
           </div>
         </div>
         <div className="form-button">
-          <button type="submit" form="" value="Submit">Modificar</button>
+          <Link to="/success"><button type="submit" form="" value="Submit">Guardar</button></Link>
         </div>
       </form>
     </div>

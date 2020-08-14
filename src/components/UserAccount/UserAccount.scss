@@ -1,3 +1,5 @@
+@import '../../assets/styles/components/App.scss';
+
 $font-family: 'Lato';
 $font-size: 16px;
 $titles-size: 24px;
@@ -16,6 +18,75 @@ $text-color: #4C5454;
   align-items: center;
   justify-content: center;
   height: auto;
+
+  table {
+    margin: 1em;
+    border-radius: 0.5em;
+    border-spacing: 0;
+    clear: both;
+    width: 100%;
+    border-spacing: 0 15px;
+
+    tr {
+      padding: 0.5em;
+    }
+
+    td {
+      text-align: center;
+      padding: 0.5em;
+    }
+
+    thead {
+      tr {
+        font-weight: bold;
+
+        th {
+          background-color: var(principal-contrast);
+          text-transform: uppercase;
+
+          &:first-child {
+            border-top-left-radius: 0.5em;
+            border-bottom-left-radius: 0.5em;
+          }
+
+          &:last-child {
+            border-top-right-radius: 0.5em;
+            border-bottom-right-radius: 0.5em;
+          }
+        }
+      }
+    }
+
+    tbody {
+      tr {
+        box-shadow: 0px 3px 6px var(--hover);
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        border-spacing: 15px;
+        height: 6em;
+        margin: 1em;
+
+        td {
+          margin: 3em;
+
+          &:first-child {
+            border-top-left-radius: 0.5em;
+            border-bottom-left-radius: 0.5em;
+          }
+
+          &:last-child {
+            border-top-right-radius: 0.5em;
+            border-bottom-right-radius: 0.5em;
+            border-right: 0 none transparent;
+          }
+        }
+
+        &:hover {
+          background-color: var(--background-gray);
+        }
+      }
+    }
+  }
 
   &__title {
     padding: 1em 0.5em;
@@ -94,6 +165,7 @@ $text-color: #4C5454;
     border-radius: 5px;
     border: none;
     background: $background-color;
+    padding: 0 1em;
   }
 }
 

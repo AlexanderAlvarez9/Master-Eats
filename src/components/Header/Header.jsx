@@ -17,7 +17,6 @@ import { useFirebaseApp, useUser } from 'reactfire';
 
 const Header = () => {
 
-
   let user = useUser();
 
   const initalState = {
@@ -80,32 +79,21 @@ const Header = () => {
           </div>
           <div className="Header__brand--icons">
             {!user &&
-
-
               <Link className="icon" to="/sign">
-              <FontAwesomeIcon className="faSignInAlt" icon={faSignInAlt} />
+                <FontAwesomeIcon className="faSignInAlt" icon={faSignInAlt} />
               </Link>
-
             }
-
-
-
 
             {
               user &&
-
               <>
                 <Link className="icon" to="/account">
                   <FontAwesomeIcon className="faUser" icon={faUser} />
                 </Link>
-
-
-
-
                 <Link className="icon" to="/admin">
                   <FontAwesomeIcon className="faCog" icon={faCog} />
                 </Link>
-                <Link className="icon" onClick={handlelogout}>
+                <Link to="/" className="icon" onClick={handlelogout}>
                   <FontAwesomeIcon className="faSignOutAlt" icon={faSignOutAlt} />
                 </Link>
               </>

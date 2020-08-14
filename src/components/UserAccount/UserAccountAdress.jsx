@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 const UserAccountAdress = () => {
   return (
@@ -7,26 +8,26 @@ const UserAccountAdress = () => {
       <form action="">
         <div className="form-wrapper">
           <div className="form-row">
-            <label htmlFor="pname">Calle</label><br />
-            <input type="text" id="calle" />
+            <label htmlFor="pname">Direccion</label><br />
+            <input type="text" id="calle" placeholder="Avenida Siempre Viva 742" />
           </div>
           <div className="form-row">
             <label htmlFor="barrio">Barrio</label><br />
-            <input type="text" id="barrio" />
+            <input type="text" id="barrio" placeholder="Spring Fall" />
           </div>
         </div>
         <div className="form-wrapper">
           <div className="form-row">
-            <label htmlFor="numeroca">Numero</label><br />
-            <input type="tel" id="numeroca" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" />
+            <label htmlFor="numeroca">Detalle</label><br />
+            <input type="tel" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" placeholder="Casa 'Amarilla'" />
           </div>
           <div className="form-row">
             <label htmlFor="ciudad">Ciudad</label><br />
-            <input type="text" id="ciudad" />
+            <input type="text" id="ciudad" placeholder="Shelbyville " />
           </div>
         </div>
         <div className="form-button">
-          <button type="submit" value="Submit">Guardar</button>
+          <Link to="/success"><button type="submit" form="" value="Submit">Guardar</button></Link>
         </div>
       </form>
     </div>
