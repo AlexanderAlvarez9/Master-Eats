@@ -3,7 +3,7 @@ import './Header.scss'
 import CategoriesMenu from '../Categories/CategoriesMenu';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faShoppingBag, faSearch, faUser, faCog, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
+import { faShoppingBag, faSearch, faUser, faCog, faShoppingCart, faSignOutAlt, faSignInAlt } from '@fortawesome/free-solid-svg-icons';
 
 import meat from '../../assets/img/categories/meat.png'
 import canned from '../../assets/img/categories/canned.png'
@@ -12,9 +12,14 @@ import beer from '../../assets/img/categories/beer.png'
 import snack from '../../assets/img/categories/snack.png'
 import vegetables from '../../assets/img/categories/vegetables.png'
 import { ProductContexts } from '../../utils/ProductContexts';
+import { useFirebaseApp, useUser } from 'reactfire';
 
 
 const Header = () => {
+
+
+  let user = useUser();
+
   const initalState = {
     "categories": [
       {
@@ -50,6 +55,13 @@ const Header = () => {
     ]
   };
 
+  const firebase = useFirebaseApp();
+
+  const handlelogout = async () => {
+    await firebase.auth().signOut()
+      .then(err => console.log(err))
+  }
+
   const { cart } = useContext(ProductContexts);
   const { products } = useContext(ProductContexts);
   return (
@@ -67,16 +79,43 @@ const Header = () => {
             <input className="" type="text" name="search" id="search" placeholder={'Encuentra tu Producto'} />
           </div>
           <div className="Header__brand--icons">
-            <Link className="icon" to="/account">
-              <FontAwesomeIcon className="faUser" icon={faUser} />
-            </Link>
+            {!user &&
+
+
+              <Link className="icon" to="/sign">
+              <FontAwesomeIcon className="faSignInAlt" icon={faSignInAlt} />
+              </Link>
+
+            }
+
+
+
+
+            {
+              user &&
+
+              <>
+                <Link className="icon" to="/account">
+                  <FontAwesomeIcon className="faUser" icon={faUser} />
+                </Link>
+
+
+
+
+                <Link className="icon" to="/admin">
+                  <FontAwesomeIcon className="faCog" icon={faCog} />
+                </Link>
+                <Link className="icon" onClick={handlelogout}>
+                  <FontAwesomeIcon className="faSignOutAlt" icon={faSignOutAlt} />
+                </Link>
+              </>
+            }
+
             <Link className="icon" to="/cart">
               <FontAwesomeIcon className="faShoppingCart" icon={faShoppingCart} />
               {products != undefined && cart.length}
             </Link>
-            <Link className="icon" to="/admin">
-              <FontAwesomeIcon className="faCog" icon={faCog} />
-            </Link>
+
           </div>
         </section>
 

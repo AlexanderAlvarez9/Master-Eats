@@ -2,6 +2,7 @@ import React from 'react';
 import '../components/Admin/AdminAccount.scss';
 import { BrowserRouter, Route, Link } from 'react-router-dom';
 import AdminProducts from '../components/Admin/AdminProducts'
+import NotFound from './NotFound';
 
 const AdminCMS = () => {
   return (
@@ -18,6 +19,7 @@ const AdminCMS = () => {
         </div>
         <div className="AdminAccount__containers">
           <Route path="/adminProducts" component={AdminProducts} />
+          <Route path="/notFound" component={NotFound} />
         </div>
       </div>
       <div className="back-img">

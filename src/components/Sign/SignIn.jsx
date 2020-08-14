@@ -1,25 +1,94 @@
-import React from 'react';
+import React, { useState } from 'react';
 import SignInImage from '../../assets/static/img-1.jpg';
+import { useFirebaseApp, useUser } from 'reactfire';
 
 const SignIn = (props) => {
+
+  const [values, setValues] = useState('')
+  const [profile, setProfile] = useState(0);
+  const firebase = useFirebaseApp();
+  let user = useUser();
+
+  // console.log(user.email);
+
+  const userValues = {
+    email: '',
+    password: '',
+  };
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setValues({ ...values, [name]: value });
+  };
+
+  const getUsers = async () => {
+    await firebase.auth()
+  }
+
+  const handleSingUp = async () => {
+    await firebase.auth().createUserWithEmailAndPassword(values.email, values.password).then(cred => {
+      return db.collection('users').doc(cred.user.uid).set({
+        ...userValues, email: cred.user.email
+      })
+    })
+  }
+
+  const handlelogout = async () => {
+    await firebase.auth().signOut();
+  }
+
+  const handleSignIn = async () => {
+    try {
+      await firebase.auth().signInWithEmailAndPassword(values.email, values.password)
+    } catch (error) {
+      alert(error.message)
+    }
+  }
+
+  const tests = async () => {
+    firebase.auth().currentUser.updateProfile({
+      displayName: "Jane Q. User",
+      photoURL: "Administrador"
+    })
+    console.log(profile);
+
+  }
+
+  const handleSubmit = e => {
+    event.preventDefault();
+  }
+
   return (
     <div className='user signinBx'>
       <div className='imgBx'>
         <img src={SignInImage} alt='Imagen inicio de sesión' />
       </div>
       <div className='formBx'>
-        <form action='' id='form' className='form-control'>
-          <h2>Inicia sesión</h2>d
+        <form id='form' className='form-control' onSubmit={handleSubmit}>
+          <h2>Inicia sesión</h2>
           <div>
-            <input type='text' name='' placeholder='Usuario' id='username' aria-label='Usuario' />
+            <input
+              id="email"
+              name="email"
+              type="text"
+              placeholder="Ingrese su correo"
+              onChange=""
+              onChange={handleInputChange}
+            />
             <small />
           </div>
 
           <div>
-            <input type='password' name='' placeholder='Contraseña' id='password' aria-label='Contraseña' />
+            <input
+              id="password"
+              name="password"
+              type="password"
+              placeholder="Ingrese su Contraseña"
+              onChange={handleInputChange}
+            />
             <small />
           </div>
-          <input type='submit' name='' value='Iniciar sesión' aria-label='Botón iniciar sesión' />
+          <input type='submit' name='' value='Iniciar sesión' aria-label='Botón iniciar sesión' onClick={handleSignIn} />
           <p className='signup'>
             ¿No tienes una cuenta?
             <a aria-label='Registrarse' href='#' onClick={props.toggleFormSignIn}>Regístrate</a>

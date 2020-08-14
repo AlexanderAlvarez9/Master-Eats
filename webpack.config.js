@@ -22,8 +22,8 @@ module.exports = {
             'babel-loader' /* Hay que usar el loader para que babel haga el trabajo */,
         },
       },
-      {
-        /* Nueva regla */ test: /\.html$/ /* Identificación de los archivos html */,
+      { /* Nueva regla */
+        test: /\.html$/ /* Identificación de los archivos html */,
         use: {
           loader: 'html-loader' /* Loader de html */,
         },
@@ -63,15 +63,34 @@ module.exports = {
           },
         ],
       },
+      {
+        test: /\.svg$/,
+        exclude: path.resolve(__dirname, 'node_modules', 'font-awesome'),
+        use: ['babel-loader', 'react-svg-loader'],
+      },
+      {
+        test: /\.svg$/,
+        include: path.resolve(__dirname, 'node_modules', 'font-awesome'),
+        use: [{
+          loader: 'file-loader',
+          options: {
+            jsx: true,
+          },
+        }],
+      },
+      {
+        test: /\.svg$/,
+        loader: 'svg-react-loader',
+      },
     ],
-  } /* Dicta las reglas necesarias para el proyecto */,
+  }, /* Dicta las reglas necesarias para el proyecto */
   devServer: {
     historyApiFallback: true,
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './public/index.html' /* Donde esta ubicado el template */,
-      filename: './index.html' /* Nombre */,
+      template: './public/index.html', /* Donde esta ubicado el template */
+      filename: './index.html', /* Nombre */
     }),
     new MiniCssExtractPlugin({
       filename: 'assets/[name].css',
