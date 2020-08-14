@@ -1,0 +1,23 @@
+.containerMain {
+  margin: 3.5em auto;
+  width: 80%;
+
+  a:visited {
+    color: var(--visited);
+  }
+
+  a:hover {
+    color: var(--hover);
+  }
+
+  a:active {
+    color: var(--active);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .containerMain {
+    margin: 1.5em auto;
+    width: 90%;
+  }
+}

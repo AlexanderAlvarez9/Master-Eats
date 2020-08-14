@@ -1,0 +1,23 @@
+language: node_js
+cache: 
+ directories:
+  - ~/.npm
+node_js: 
+ - '12'
+git:
+  depth: 5
+script:
+  - yarn build
+deploy:
+  provider: pages
+  edge: true,
+  cleanup: false
+  keep_history: true
+  github-token: $GITHUB_TOKEN
+  local_dir: dist/
+  project_name: "MasterEats"
+  target_branch: gh-pages
+  commit_message: "Deploy Release from: %{git_branch} & with message: %{git_commit_msg}"
+  verbose: true
+  on:
+    branch: development

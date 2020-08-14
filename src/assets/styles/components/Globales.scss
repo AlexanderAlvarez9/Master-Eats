@@ -1,0 +1,10 @@
+@import './Variables';
+
+body {
+  background-color: $background-color;
+  color: $font-color;
+  a {
+    text-decoration: none;
+  }
+  font-family: 'Lato', sans-serif;
+}
