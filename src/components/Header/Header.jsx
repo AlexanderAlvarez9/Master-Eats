@@ -99,10 +99,12 @@ const Header = () => {
               </>
             }
 
-            <Link className="icon" to="/cart">
-              <FontAwesomeIcon className="faShoppingCart" icon={faShoppingCart} />
-              {products != undefined && cart.length}
-            </Link>
+            {cart.length > 0 &&
+              <Link className="icon" to="/cart">
+                <FontAwesomeIcon className="faShoppingCart" icon={faShoppingCart} />
+                {products != undefined && cart.length}
+              </Link>
+            }
 
           </div>
         </section>
