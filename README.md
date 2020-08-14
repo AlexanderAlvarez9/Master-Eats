@@ -1,7 +1,4 @@
 # Master Eats
-## About
-
-Platzi Master Group Project - Cohort 3 - Ana - JS Team
 
 ## Description
 
@@ -16,22 +13,17 @@ By visiting this website, the user will be able to:
 - Search for items
 - Filter items by using categories
 - Add and delete items to a cart
-- The purchase process will implement...
+- The purchase process will implement..
 - In order to complete the purchase process, the user must be logged in. Otherwise, he or she will be redirected to the Sign-up and Sign-in section.
 
 ## Authors
 
 - Alejandro Ortiz
 - Alexander Alvarez
-- Axel Arteaga Ruiz
 - Camilo Andres Alfonso Suarez
 - Felipe Chavez
 - Juan Camilo Moreno
 - Walter Salas
-
-## Mock Ups
-
-- [MockUps Adobe XD](https://xd.adobe.com/view/387e0f8a-766d-40a9-8d54-21293f55bb3e-6d2d/)
 
 ## Wireframes
 
@@ -41,6 +33,10 @@ By visiting this website, the user will be able to:
 - [SignIn/SignUp](https://docs.google.com/drawings/d/1fD4bgBp5PBWeh1o_za6U2wZEtbIhDcAPfxm15pcp7OA/edit?usp=sharing)
 - [Account](https://docs.google.com/drawings/d/1CNXst-WBV_pSlThwBVMDMtAF5rJYv3y66pYFcrUw88s/edit?usp=sharing)
 
+## Mock Ups
+
+- [MockUps Adobe XD](https://xd.adobe.com/view/4ad7fd99-177a-427a-857d-4103f2bb4ee1-1f84/)
+
 ## Roles
 
 - Alexander: MainPage - Header - Footer
@@ -48,7 +44,6 @@ By visiting this website, the user will be able to:
 - Juan Camilo: Cart
 - Camilo Andres: Account
 - Walter: Design / Error 404 - Success
-- Axel: Backend (PHP)
 - Alejandro: Backend (Node)
 
 ## Installing
@@ -87,7 +82,8 @@ Please make sure to follow the instructions below:
 - Test will be created has NameOfComponent.test.js in ./src/__test__/Test.test.js
 
 ## Backend
-Pending...
+You can find how use the API with this link:
+https://documenter.getpostman.com/view/11548428/T1LPBmPz?version=latest
 
 ## Technologies
 
@@ -95,10 +91,17 @@ Pending...
 - Webpack
 - React
 - Sass
+- Redux
+- React Router
+- Prettier
+- Eslint
 
 ### Backend
-- Node.js
-- PHP
+- Express
+- Passport
+- MongoDB
+- UUID
+- Cloudinary
 
 ## Demo
 
@@ -107,6 +110,10 @@ You can see the demo live [here](https://mastereatsplatzi.github.io/Master-Eats/
 ### Preview
 
 ![preview.png](preview.png)
+
+## About
+
+Platzi Master Group Project - Cohort 3 - Ana - JS Team
 
 ## License
 
