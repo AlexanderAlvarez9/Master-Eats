@@ -6,7 +6,7 @@ import { addCart, removeCart, plus, minus } from './Action';
 export const ProductContexts = createContext();
 
 const ProductsProvider = ({ children }) => {
-  const API = 'http://104.248.123.166:9000/api/products';
+  const API = 'https://alejoortizd.tech/api/products';
   // const API = 'http://104.248.123.166:8000/api/products';
   const initialState = useInitialState(API);
   const products = initialState;
