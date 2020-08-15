@@ -3,6 +3,7 @@ import './UserAccount.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faRecycle } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
+import { useFirebaseApp } from 'reactfire';
 
 const UserAccountOrders = () => {
 
