@@ -1,15 +1,12 @@
-import React, { createContext, useState, useReducer } from 'react';
-import useInitialState from '../hooks/useInitialState';
+import React, { createContext, useReducer } from 'react';
 import reducer from './Reducer';
 import { addCart, removeCart, plus, minus } from './Action';
+import data from './savePorfolio.json';
 
 export const ProductContexts = createContext();
 
 const ProductsProvider = ({ children }) => {
-  const API = 'https://alejoortizd.tech/api/products';
-  // const API = 'http://104.248.123.166:8000/api/products';
-  const initialState = useInitialState(API);
-  const products = initialState;
+  const products = data.data;
 
   const [{ cart, quantityById }, dispatch] = useReducer(reducer, {
     cart: [],

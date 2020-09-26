@@ -5,12 +5,10 @@ const useInitialState = (API) => {
   useEffect(() => {
     fetch(API)
       .then((response) => response.json())
-      .then((data) =>
-        data.data.reduce((objAcum, product) => {
-          objAcum[product._id] = product;
-          return objAcum;
-        }, {})
-      )
+      .then((data) => data.data.reduce((objAcum, product) => {
+        objAcum[product._id] = product;
+        return objAcum;
+      }, {}))
       .then((data) => setData(data))
       .catch((err) => console.log(err));
   }, []);

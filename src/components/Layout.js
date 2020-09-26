@@ -4,11 +4,11 @@ import Footer from './Footer/Footer';
 
 function Layout(props) {
   return (
-    <React.Fragment>
+    <>
       <Header />
       {props.children}
       <Footer />
-    </React.Fragment>
+    </>
   );
 }
 
