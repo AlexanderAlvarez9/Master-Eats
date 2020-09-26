@@ -11,7 +11,10 @@ const CardItem = ({ productId }) => {
       <img className='card--img' src={originpath} width='135' alt={name} />
       <div className='card--text'>
         <p className='card--text__name'>{name}</p>
-        <span className='card--text__price'>${price}</span>
+        <span className='card--text__price'>
+          $
+          {price}
+        </span>
       </div>
       <button className='card--button' onClick={() => addToCart(productId)}>
         Agregar
@@ -26,12 +29,12 @@ const Card = () => {
   return (
     <>
       {products !== undefined ? (
-        Object.keys(products).map(productId => (
+        Object.keys(products).map((productId) => (
           <CardItem key={productId} productId={productId} />
         ))
       ) : (
-          <h1>Sin productos</h1>
-        )}
+        <h1>Sin productos</h1>
+      )}
     </>
   );
 };

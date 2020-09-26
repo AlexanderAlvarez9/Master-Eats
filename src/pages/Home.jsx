@@ -7,7 +7,7 @@ import Card from '../components/Card/Card';
 const Home = () => {
 
   return (
-    <div className="Home">
+    <div className='Home'>
       <Categories title='Todos Los Productos'>
         <ProductsContainer>
           <Card />

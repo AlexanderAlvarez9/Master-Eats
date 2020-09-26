@@ -60,9 +60,13 @@ const CartItem = ({ productId }) => {
           <FontAwesomeIcon icon={faPlusCircle} />
         </button>
       </div>
-      <p>${price}</p>
+      <p>
+        $
+        {price}
+      </p>
       <p className='item__total'>
-        ${getProductSubtotal(products, quantityById, productId)}
+        $
+        {getProductSubtotal(products, quantityById, productId)}
       </p>
       <button onClick={handleDelete}>
         <FontAwesomeIcon icon={faTimesCircle} />
