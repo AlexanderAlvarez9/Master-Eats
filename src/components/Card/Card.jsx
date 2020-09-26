@@ -8,7 +8,7 @@ const CardItem = ({ productId }) => {
 
   return (
     <div className='card' key={productId}>
-      <img className='card--img' src={originpath} width='135' alt={name} />
+      <img className='card--img' src={originpath.slice(-47)} width='135' alt={name} />
       <div className='card--text'>
         <p className='card--text__name'>{name}</p>
         <span className='card--text__price'>
