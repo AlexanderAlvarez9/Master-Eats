@@ -47,6 +47,7 @@ const CartItem = ({ productId }) => {
     <div className='item'>
       <img src={originpath} width='80' height='80' alt={name} />
       <p>{name}</p>
+
       <div className='item__cantidad'>
         <button
           type='button'
@@ -60,6 +61,7 @@ const CartItem = ({ productId }) => {
           <FontAwesomeIcon icon={faPlusCircle} />
         </button>
       </div>
+
       <p>
         $
         {price}
