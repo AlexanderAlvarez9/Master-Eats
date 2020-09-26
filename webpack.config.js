@@ -53,6 +53,17 @@ module.exports = {
         ],
       },
       {
+        test: /\.(png)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: 'assets/[hash].[ext]',
+            },
+          },
+        ],
+      },
+      {
         test: /\.svg$/,
         exclude: path.resolve(__dirname, 'node_modules', 'font-awesome'),
         use: ['babel-loader', 'react-svg-loader'],
