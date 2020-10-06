@@ -1,12 +1,15 @@
 import React, { createContext, useReducer } from 'react';
+import useInitialState from '../hooks/useInitialState';
 import reducer from './Reducer';
 import { addCart, removeCart, plus, minus } from './Action';
-import data from './savePorfolio.json';
+// import data from './savePorfolio.json';
 
 export const ProductContexts = createContext();
 
 const ProductsProvider = ({ children }) => {
-  const products = data.data;
+  const API = 'https://arcane-savannah-17295.herokuapp.com/api/products';
+  const initialState = useInitialState(API);
+  const products = initialState;
 
   const [{ cart, quantityById }, dispatch] = useReducer(reducer, {
     cart: [],
@@ -38,4 +41,5 @@ const ProductsProvider = ({ children }) => {
 export default ProductsProvider;
 
 export const getProduct = (products, id) => products[id];
-export const getProductSubtotal = (products, qtyById, id) => (products[id].price * qtyById[id]).toFixed(2);
+export const getProductSubtotal = (products, qtyById, id) =>
+  (products[id].price * qtyById[id]).toFixed(2);
