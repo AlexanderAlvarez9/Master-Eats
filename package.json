@@ -37,7 +37,7 @@
     "react-scripts": "^5.0.1",
     "react-toastify": "^6.0.8",
     "reactfire": "^2.0.0-alpha.3",
-    "svg-react-loader": "^0.4.0"
+    "svg-react-loader": "^0.4.6"
   },
   "devDependencies": {
     "@babel/core": "^7.10.4",
