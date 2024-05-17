@@ -7,19 +7,17 @@ import { useFirebaseApp } from 'reactfire';
 
 const UserAccountOrders = () => {
 
-
   const firebase = useFirebaseApp();
 
   const handlelogout = async () => {
     await firebase.auth().signOut()
-      .then(err => console.log(err))
-  }
+      .then((err) => console.log(err));
+  };
 
   return (
-    <div className="UserAccount__container__menu-settings">
-      <div className="order">
-        <h2 className="title">Mis Ordenes Recientes</h2>
-
+    <div className='UserAccount__container__menu-settings'>
+      <div className='order'>
+        <h2 className='title'>Mis Ordenes Recientes</h2>
 
         <table>
           <thead>
@@ -39,7 +37,7 @@ const UserAccountOrders = () => {
               <td>$215.000</td>
               <td>13/08/2020</td>
               <td>
-                <Link to="/notFound"><i className="card--button"><FontAwesomeIcon className="faRecycle actions" icon={faRecycle} title="Edit" /></i></Link>
+                <Link to='/notFound'><i className='card--button'><FontAwesomeIcon className='faRecycle actions' icon={faRecycle} title='Edit' /></i></Link>
               </td>
             </tr>
             <tr>
@@ -48,7 +46,7 @@ const UserAccountOrders = () => {
               <td>$15.000</td>
               <td>13/08/2020</td>
               <td>
-                <Link to="/notFound"><i className="card--button"><FontAwesomeIcon className="faRecycle actions" icon={faRecycle} title="Edit" /></i></Link>
+                <Link to='/notFound'><i className='card--button'><FontAwesomeIcon className='faRecycle actions' icon={faRecycle} title='Edit' /></i></Link>
               </td>
             </tr>
             <tr>
@@ -57,19 +55,16 @@ const UserAccountOrders = () => {
               <td>$346.000</td>
               <td>13/08/2020</td>
               <td>
-                <Link to="/notFound"><i className="card--button"><FontAwesomeIcon className="faRecycle actions" icon={faRecycle} title="Edit" /></i></Link>
+                <Link to='/notFound'><i className='card--button'><FontAwesomeIcon className='faRecycle actions' icon={faRecycle} title='Edit' /></i></Link>
               </td>
             </tr>
-
 
           </tbody>
         </table>
 
-
-
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default UserAccountOrders;

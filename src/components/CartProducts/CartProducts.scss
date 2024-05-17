@@ -60,6 +60,7 @@
           background-color: rgba(0, 0, 0, 0);
           border: none;
           cursor: pointer;
+
           &:disabled .fa-minus-circle {
             color: rgb(167, 167, 167);
             cursor: not-allowed;
@@ -104,8 +105,7 @@
         padding: 5px;
         min-width: 130px;
 
-        &__img {
-        }
+        &__img {}
 
         p {
           margin: 0;
@@ -133,6 +133,7 @@
 @media (max-width: 900px) {
   .content {
     grid-template-columns: 1fr;
+
     .products__cards {
       display: none;
     }

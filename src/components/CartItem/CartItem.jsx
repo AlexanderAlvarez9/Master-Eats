@@ -47,6 +47,7 @@ const CartItem = ({ productId }) => {
     <div className='item'>
       <img src={originpath} width='80' height='80' alt={name} />
       <p>{name}</p>
+
       <div className='item__cantidad'>
         <button
           type='button'
@@ -60,9 +61,14 @@ const CartItem = ({ productId }) => {
           <FontAwesomeIcon icon={faPlusCircle} />
         </button>
       </div>
-      <p>${price}</p>
+
+      <p>
+        $
+        {price}
+      </p>
       <p className='item__total'>
-        ${getProductSubtotal(products, quantityById, productId)}
+        $
+        {getProductSubtotal(products, quantityById, productId)}
       </p>
       <button onClick={handleDelete}>
         <FontAwesomeIcon icon={faTimesCircle} />

@@ -1,6 +1,4 @@
 import React, { useContext, useEffect } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBeer } from '@fortawesome/free-solid-svg-icons';
 import { ProductContexts, getProduct } from '../../utils/ProductContexts';
 
 const CartCardsItem = ({ productId }) => {
@@ -8,16 +6,19 @@ const CartCardsItem = ({ productId }) => {
   const { originpath, name, price } = getProduct(products, productId);
 
   return (
-    <div className="card" key={productId}>
-      <img src={originpath} width="100" alt="foto" />
+    <div className='card' key={productId}>
+      <img src={originpath} width='100' alt='foto' />
       <p>{name}</p>
       <span>
-        <b>${price}</b>
+        <b>
+          $
+          {price}
+        </b>
       </span>
       <button>Agregar</button>
     </div>
-  )
-}
+  );
+};
 
 const CartCards = () => {
   const { products } = useContext(ProductContexts);
@@ -25,9 +26,8 @@ const CartCards = () => {
   const random = Math.floor(Math.random() * products.length);
   const random2 = random + 4;
 
-
   return (
-    <section className="products__cards" >
+    <section className='products__cards'>
       {/* <div className="products__cards--title">
         <span>
           <FontAwesomeIcon icon={faBeer} />
@@ -46,7 +46,7 @@ const CartCards = () => {
         }
       </div> */}
     </section>
-  )
+  );
 };
 
 export default CartCards;

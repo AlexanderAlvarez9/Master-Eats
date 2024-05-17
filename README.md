@@ -82,8 +82,15 @@ Please make sure to follow the instructions below:
 - Test will be created has NameOfComponent.test.js in ./src/__test__/Test.test.js
 
 ## Backend
-You can find how use the API with this link:
-https://documenter.getpostman.com/view/11548428/T1LPBmPz?version=latest
+
+The App consume a json to show the items, in the file:
+
+> src/utils/ProductContexts.jsx
+
+and the format is like next image:
+
+![JSON-format.png](JSON-format.png)
+
 
 ## Technologies
 
